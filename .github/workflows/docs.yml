@@ -22,11 +22,15 @@ jobs:
         run: |
           cd docs
           poetry run make html
+      - name: Set the correct root
+        run: |
+          mv _build/html _build/cookiecutter-py  # this is the slug
+          rm -r _build/doctrees
       - name: Deploy to Netlify
         id: netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './docs/_build/html'
+          publish-dir: './docs/_build'
           production-deploy: ${{ github.event_name == 'push' }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           enable-commit-comment: false
