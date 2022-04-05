@@ -36,6 +36,7 @@ dev = [
   "pyyaml",
   "pytest-cov",
   "tox",
+  "sphinx",
   "sphinx-book-theme",
   "sphinx_autodoc_typehints",
   "myst_nb",
