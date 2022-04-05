@@ -1,10 +1,10 @@
-name: Publish docs
+name: Docs
 on:
-  workflow_run:
-    workflows:
-      - Build Docs
-    types: 
-      - completed
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 
 jobs:
   preview-docs:
