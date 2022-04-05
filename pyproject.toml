@@ -35,7 +35,11 @@ dev = [
   "pytest-cookies",
   "pyyaml",
   "pytest-cov",
-  "tox"
+  "tox",
+  "sphinx-book-theme",
+  "sphinx_autodoc_typehints",
+  "myst_nb",
+  "nbproject",
 ]
 
 [tool.black]
