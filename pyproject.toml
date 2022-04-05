@@ -2,10 +2,10 @@
 [tool.poetry]
 name = "cookiecutter_py"
 version = "0.0.1"
-description = "Cookiecutter template for a Python package"
+description = "Lamin template for Python"
 license = "closed source"
 authors = ["Lamin Labs"]
-readme = "README.md"
+readme = "README.rst"
 repository = "https://github.com/laminlabs/cookiecutter-py"
 documentation = "https://lamin.dev/cookiecutter-py/"
 keywords = ['cookiecutter', 'template', 'package']
