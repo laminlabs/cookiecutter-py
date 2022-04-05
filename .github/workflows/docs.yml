@@ -26,7 +26,7 @@ jobs:
         id: netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './site'
+          publish-dir: './docs/_build/html'
           production-deploy: ${{ github.event_name == 'push' }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           enable-commit-comment: false
