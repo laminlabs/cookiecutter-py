@@ -22,7 +22,8 @@ jobs:
         run: |
           cd docs
           poetry run make html
-      - name: Set the correct root
+      - name: Change base URL to project-slug
+        if: github.event_name == 'push'
         run: |
           mv docs/_build/html docs/_build/cookiecutter-py  # this is the slug
           rm -r docs/_build/doctrees
