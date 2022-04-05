@@ -1,4 +1,4 @@
-# Tutorial
+# Get started
 
 ## Quickstart
 
