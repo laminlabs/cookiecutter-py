@@ -1,5 +1,20 @@
 # Tutorial
 
+## Quickstart
+
+Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher):
+
+```
+pip install -U cookiecutter
+```
+
+Generate a Python package project:
+
+```
+cookiecutter https://github.com/laminlabs/cookiecutter-py.git
+```
+
+
 ??? Note
     Did you find this article confusing? [Edit this file] and pull a request!
 
