@@ -17,13 +17,20 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.6.*"
+python = ">=3.7.0,<4.0"
 cookiecutter = "1.7.2"
 pytest = {version = "^6.2.3", optional=true}
 pytest-cookies = {version = "^0.6.1", optional=true}
 pyyaml = {version="^5.3.1", optional=true}
 pytest-cov = {version="^2.10.1", optional=true}
 tox = {version = "^3.20.1", optional=true}
+
+[tool.poetry.dev-dependencies]
+sphinx = "^4.5.0"
+sphinx-book-theme = "^0.3.2"
+sphinx-autodoc-typehints = "^1.17.0"
+myst-nb = "^0.13.2"
+
 
 [tool.poetry.extras]
 dev = [
@@ -36,7 +43,6 @@ dev = [
   "sphinx-book-theme",
   "sphinx_autodoc_typehints",
   "myst_nb",
-  "nbproject"
 ]
 
 [tool.black]
