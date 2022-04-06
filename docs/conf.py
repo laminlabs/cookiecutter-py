@@ -21,7 +21,7 @@ html_theme_options = {
     "use_repository_button": True,
 }
 source_suffix = [".rst", ".ipynb"]
-master_doc = "index"
+root_doc = "index"
 default_role = "literal"
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
 templates_path = ["_templates"]
