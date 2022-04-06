@@ -22,9 +22,11 @@ jobs:
         run: |
           cd docs
           poetry run make html
-      - name: Build docs
+      - name: Change base URL to project-slug  # for Netlify URL prettification
+        if: github.event_name == 'push'
         run: |
-          cat docs/_build/html/index.html
+          mv docs/_build/html docs/_build/cookiecutter-py  # this is the slug
+          rm -r docs/_build/doctrees
       - name: Deploy to Netlify
         id: netlify
         uses: nwtgck/actions-netlify@v1.2
