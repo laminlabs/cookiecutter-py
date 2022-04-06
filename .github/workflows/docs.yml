@@ -31,7 +31,7 @@ jobs:
         id: netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: 'docs/_build/html'
+          publish-dir: 'docs/_build'  # ensures the slug is relative to _build
           production-deploy: ${{ github.event_name == 'push' }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           enable-commit-comment: false
