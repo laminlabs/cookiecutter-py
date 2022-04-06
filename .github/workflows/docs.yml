@@ -24,7 +24,7 @@ jobs:
           poetry run make html
       - name: Build docs
         run: |
-          cat _build/html/index.html
+          cat docs/_build/html/index.html
       - name: Deploy to Netlify
         id: netlify
         uses: nwtgck/actions-netlify@v1.2
