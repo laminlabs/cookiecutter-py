@@ -14,6 +14,7 @@ author = "Lamin Labs"
 copyright = f"{datetime.now():%Y}, {author}"
 release = cookiecutter_py.__version__
 
+html_baseurl = "/cookiecutter-py/"
 html_theme = "sphinx_book_theme"
 html_theme_options = {
     "repository_url": "https://github.com/laminlabs/cookiecutter-py",
