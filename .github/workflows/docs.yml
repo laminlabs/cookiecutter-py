@@ -17,11 +17,16 @@ jobs:
           pip install poetry
       - name: Install dependencies
         run: |
-          poetry install -E dev
+          poetry install
       - name: Build docs
         run: |
           cd docs
           poetry run make html
+      - name: Change base URL to project-slug  # for Netlify URL prettification
+        if: github.event_name == 'push'
+        run: |
+          mv docs/_build/html docs/_build/cookiecutter-py  # this is the slug
+          rm -r docs/_build/doctrees
       - name: Deploy to Netlify
         id: netlify
         uses: nwtgck/actions-netlify@v1.2
