@@ -1,14 +1,14 @@
 |Docs| |Test|
 
-.. |Docs| image:: https://github.com/laminlabs/cookiecutter-py/actions/workflows/docs.yml/badge.svg
+|Docs| image:: https://github.com/laminlabs/cookiecutter-py/actions/workflows/docs.yml/badge.svg
    :target: https://github.com/laminlabs/cookiecutter-py/actions/workflows/docs.yml
-.. |Test| image:: https://github.com/laminlabs/cookiecutter-py/actions/workflows/docs.yml/badge.svg
+|Test| image:: https://github.com/laminlabs/cookiecutter-py/actions/workflows/docs.yml/badge.svg
    :target: https://github.com/laminlabs/cookiecutter-py/actions/workflows/docs.yml
 
 cookiecutter-py: Lamin template for Python
 ==========================================
 
-See the `documentation <https://lamin.dev/cookiecutter-py>`__.
+See the [documentation](https://lamin.ai/cookiecutter-py).
 
 Credits
 -------
