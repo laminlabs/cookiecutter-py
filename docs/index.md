@@ -4,7 +4,7 @@
 ```
 
 * {doc}`get-started`.
-* Check out the [architecture](architecture)` of the project template.
+* Check out the [architecture](architecture) of the project template.
 
 ```{toctree}
 :maxdepth: 1
