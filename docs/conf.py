@@ -1,7 +1,5 @@
 import sys
-from datetime import datetime
 from pathlib import Path
-from sphinx.application import Sphinx
 
 HERE = Path(__file__).parent
 sys.path[:0] = [str(HERE.parent), str(HERE)]
