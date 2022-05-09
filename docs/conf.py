@@ -19,7 +19,7 @@ extensions = [
     "myst_parser",
 ]
 
-html_baseurl = "/cookiecutter-py/"
+# html_baseurl = "/cookiecutter-py/"
 
 templates_path = ["lamin-sphinx-theme/_templates"]
 exclude_patterns = [
@@ -45,7 +45,7 @@ html_theme_options = {
 html_context = {
     "default_mode": "auto",
     "github_user": "laminlabs",
-    "github_repo": "nbproject",
+    "github_repo": "cookiecutter-py",
     "github_version": "main",
 }
 
@@ -55,16 +55,12 @@ html_favicon = "lamin-sphinx-theme/_static/img/favicon.ico"
 html_static_path = ["lamin-sphinx-theme/_static"]
 
 html_sidebars = {
-    "**": ["sidebar-nav-bs"],
+    "*": [],
 }
 
 source_suffix = [".md", ".ipynb"]
 master_doc = "index"
 default_role = "literal"
-
-
-
-
 
 # Generate the API documentation
 autosummary_generate = True
@@ -76,6 +72,13 @@ napoleon_use_rtype = True  # having a separate entry generally helps readability
 napoleon_use_param = True
 todo_include_todos = False
 nitpicky = True  # report broken links
+
+# Other configurations
+panels_add_bootstrap_css = False
+myst_enable_extensions = [
+    "deflist",
+    "colon_fence",
+]
 
 
 def setup(app: Sphinx):
