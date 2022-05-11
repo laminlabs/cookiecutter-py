@@ -1,1 +1,1 @@
-::: {{ cookiecutter.pkg_name }}
+# API
