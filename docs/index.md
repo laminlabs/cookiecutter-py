@@ -12,8 +12,4 @@
 
 get-started
 architecture
-history
-faq
-make-release
-cli
 ```
