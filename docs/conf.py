@@ -11,4 +11,4 @@ html_title = f"{project} | Lamin Labs"
 release = cookiecutter_py.__version__
 html_context["github_repo"] = "cookiecutter-py"  # noqa
 
-ogp_site_url = f"https://lamin.ai/project"
+ogp_site_url = "https://lamin.ai/project"
