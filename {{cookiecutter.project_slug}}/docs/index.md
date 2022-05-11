@@ -1,4 +1,4 @@
-# {{ cookiecutter.project_name }}: What does it do
+# {{ cookiecutter.project_name }}: {{ cookiecutter.description }}
 
 ```{toctree}
 :maxdepth: 1

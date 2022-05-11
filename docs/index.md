@@ -14,6 +14,6 @@ get-started
 architecture
 history
 faq
-pypi_release_checklist
+make-release
 cli
 ```

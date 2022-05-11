@@ -54,11 +54,7 @@ def install_pre_commit_hooks():
 
 if __name__ == "__main__":
 
-    if "no" in "{{ cookiecutter.command_line_interface|lower }}":
-        cli_file = os.path.join("{{ cookiecutter.pkg_name }}", "cli.py")
-        remove_file(cli_file)
-
-    if "Not open source" == "{{ cookiecutter.open_source_license }}":
+    if "not open source" == "{{ cookiecutter.open_source_license }}":
         remove_file("LICENSE")
 
     try:
@@ -66,13 +62,12 @@ if __name__ == "__main__":
     except Exception as e:
         print(e)
 
-    if "{{ cookiecutter.install_precommit_hooks }}" == "y":
-        try:
-            install_pre_commit_hooks()
-        except Exception as e:
-            print(str(e))
-            print(
-                "Failed to install pre-commit hooks. Please run `pre-commit install` by"
-                " your self. For more on pre-commit, please refer to"
-                " https://pre-commit.com"
-            )
+    try:
+        install_pre_commit_hooks()
+    except Exception as e:
+        print(str(e))
+        print(
+            "Failed to install pre-commit hooks. Please run `pre-commit install` by"
+            " your self. For more on pre-commit, please refer to"
+            " https://pre-commit.com"
+        )
