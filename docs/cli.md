@@ -1,6 +1,6 @@
-# Console Script Setup
+# Console script setup
 
-Optionally, your package can include a console script using Argparse.
+Optionally, your package can include a console script using argparse.
 
 ## How It Works
 

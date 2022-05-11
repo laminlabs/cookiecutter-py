@@ -15,5 +15,5 @@ architecture
 history
 faq
 pypi_release_checklist
-console_script_setup
+cli
 ```
