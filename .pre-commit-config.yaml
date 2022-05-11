@@ -10,6 +10,10 @@ repos:
     rev: 22.3.0
     hooks:
       - id: black-jupyter
+        exclude: |
+          (?x)(
+              ^{{cookiecutter.project_slug}}/
+          )
   - repo: https://github.com/pycqa/flake8
     rev: 4.0.1
     hooks:
@@ -17,6 +21,10 @@ repos:
         additional_dependencies:
           - flake8-black>=0.1.1
         language_version: python3
+        exclude: |
+          (?x)(
+              ^{{cookiecutter.project_slug}}/
+          )
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.6.2
     hooks:
