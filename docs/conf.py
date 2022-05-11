@@ -2,15 +2,13 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
-sys.path[:0] = [str(HERE.parent), str(HERE)]
-
+sys.path[:0] = [str(HERE)]
 from lamin_sphinx import *  # noqa
 import cookiecutter_py  # noqa
-for generated in HERE.glob("cookiecutter_py.*.rst"):
-    generated.unlink()
 
-project = "cookiecutter_py"
+project = "cookiecutter-py"
+html_title = f"{project} | Lamin Labs"
 release = cookiecutter_py.__version__
-html_title = "cookiecutter-py | Lamin Labs"
+html_context["github_repo"] = "cookiecutter-py"  # noqa
 
-ogp_site_url = "https://lamin.ai/cookiecutter_py"
+ogp_site_url = f"https://lamin.ai/project"
