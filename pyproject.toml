@@ -23,8 +23,5 @@ test = [
     "nbmake",
 ]
 
-[project.scripts]
-bionty = "bionty.__main__:main"
-
 [tool.black]
-experimental-string-processing = true
+preview = true
