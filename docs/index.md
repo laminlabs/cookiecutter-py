@@ -3,8 +3,8 @@
 :end-line: 10
 ```
 
-* {doc}`get-started`.
-* Check out the [architecture](architecture) of the project template.
+- {doc}`get-started`.
+- Check out the [architecture](architecture) of the project template.
 
 ```{toctree}
 :maxdepth: 1

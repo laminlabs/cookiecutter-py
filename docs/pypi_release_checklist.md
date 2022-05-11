@@ -13,26 +13,26 @@ You better visit PyPI to make sure your package name is unused.
 
 2.  Commit the changelog changes:
 
-    > ``` bash
+    > ```bash
     > git add CHANGELOG.md
     > git commit -m "Changelog for upcoming release 0.1.1."
     > ```
 
 3.  Update version number and automatically create a commit, tag(can also be patch or major).
 
-    > ``` bash
+    > ```bash
     > poetry run bump2version minor
     > ```
 
 4.  Run the tests locally for insurance:
 
-    > ``` bash
+    > ```bash
     > poetry run tox
     > ```
 
 5.  Push these commits to master/main:
 
-    > ``` bash
+    > ```bash
     > git push
     > ```
 
@@ -40,7 +40,7 @@ You better visit PyPI to make sure your package name is unused.
 
 6.  Push the tags(created by bump2version) to master/main, creating the new release on both GitHub and PyPI:
 
-    > ``` bash
+    > ```bash
     > git push --tags
     > ```
 

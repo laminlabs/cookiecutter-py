@@ -14,9 +14,8 @@ Generate a Python package project:
 cookiecutter https://github.com/laminlabs/cookiecutter-py.git
 ```
 
-
 ??? Note
-    Did you find this article confusing? [Edit this file] and pull a request!
+Did you find this article confusing? [Edit this file] and pull a request!
 
 To start with, you will need [GitHub], [PyPI], [TestPyPI] and [Codecov] account. If
 you don't have one, please follow the links to apply one before you get started on this
@@ -29,7 +28,7 @@ some tutorials at the top of the page at [GitHub Help].
 
 Install cookiecutter:
 
-``` bash
+```bash
 pip install cookiecutter
 ```
 
@@ -104,11 +103,11 @@ This is the recommended way of installing poetry.
 ## Step 4: Install Dev Requirements
 
 You should still be in the folder named as `project_slug`, which containing the
- `pyproject.toml` file.
+`pyproject.toml` file.
 
 Install the new project's local development requirements with `poetry install`:
 
-``` bash
+```bash
 poetry install -E doc -E dev -E test
 poetry run tox
 ```
@@ -148,7 +147,7 @@ Go to your GitHub account and create a new repo named `my-package`, where
 cookiecutter.
 
 Then go to repo > settings > secrets, click on 'New repository secret', add the following
- secrets:
+secrets:
 
 - TEST_PYPI_API_TOKEN, see [How to apply TestPyPI token]
 - PYPI_API_TOKEN, see [How to apply pypi token]
@@ -179,7 +178,7 @@ Back to your develop environment, find the folder named after the `project_slug`
 Move into this folder, and then setup git to use your GitHub repo and upload the
 code:
 
-``` bash
+```bash
 cd my-package
 
 git add .
@@ -213,7 +212,7 @@ new artifact is published under the name `project_slug`.
 
 ## Step 8. Check documentation
 
-Documentation will be published and available at *https://{your_github_account}.github.io/{your_repo}* once:
+Documentation will be published and available at _https://{your_github_account}.github.io/{your_repo}_ once:
 
 1. the commit is tagged, and the tag name is started with 'v' (lower case)
 2. build/testing executed by GitHub CI passed
@@ -228,20 +227,19 @@ This will run the builtin development server for you to preview.
 
 ## Step 9. Make official release
 
-  After done with your phased development in a feature branch, make a pull request, following
-  instructions at [release checklist](pypi_release_checklist.md), trigger first official release and check
-  result at [PyPI].
+After done with your phased development in a feature branch, make a pull request, following
+instructions at [release checklist](pypi_release_checklist.md), trigger first official release and check
+result at [PyPI].
 
-
-[Edit this file]: https://github.com/waynerv/cookiecutter-pypackage/blob/master/docs/tutorial.md
-[Codecov]: https://codecov.io/
-[PYPI]: https://pypi.org
-[GitHub]: https://github.com/
-[TestPyPI]: https://test.pypi.org/
-[GitHub Help]: https://help.github.com/
-[Generate]: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
-[Add]: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
-[How to apply testpypi token]: https://test.pypi.org/manage/account/
-[How to apply pypi token]: https://pypi.org/manage/account/
-[How to apply personal token]: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
+[edit this file]: https://github.com/waynerv/cookiecutter-pypackage/blob/master/docs/tutorial.md
+[codecov]: https://codecov.io/
+[pypi]: https://pypi.org
+[github]: https://github.com/
+[testpypi]: https://test.pypi.org/
+[github help]: https://help.github.com/
+[generate]: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+[add]: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+[how to apply testpypi token]: https://test.pypi.org/manage/account/
+[how to apply pypi token]: https://pypi.org/manage/account/
+[how to apply personal token]: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
 [install codecov app]: https://github.com/apps/codecov
