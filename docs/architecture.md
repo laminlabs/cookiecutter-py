@@ -6,13 +6,14 @@
 - [flit](https://python-poetry.org/): Manage releases.
 - [pre-commit](https://pre-commit.com/): Formatting/linting anytime when commit your code.
 - [gitmoji](https://gitmoji.dev/): Let others quickly grasp the type of PRs and commits you make!
+- Sort imports [isort](https://github.com/PyCQA/isort).
+- Check static type with [mypy](http://mypy-lang.org/).
+- Strip notebooks with nbstripout. [TODO: need to exclude tasks directory!]
 - GitHub Actions auto-builds.
 
 We'll soon also integrate:
 
-- Sort imports [isort](https://github.com/PyCQA/isort).
 - Code coverage report and endorsed by [Codecov](https://codecov.io)
-- Check static type with [Mypy](http://mypy-lang.org/) (optional)
 - [bump2version](https://github.com/c4urself/bump2version): Pre-configured version bumping with a single command
 
 ## Credits
