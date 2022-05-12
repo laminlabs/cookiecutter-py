@@ -1,11 +1,12 @@
 import sys
 from pathlib import Path
 
+import {{ cookiecutter.pkg_name}}
+
 HERE = Path(__file__).parent
 sys.path[:0] = [str(HERE)]
 from lamin_sphinx import *  # noqa
-
-import {{ cookiecutter.pkg_name}}  # noqa
+from lamin_sphinx import html_context  # noqa
 
 project = "{{ cookiecutter.pkg_slug}}"
 html_title = f"{project} | Lamin Labs"
