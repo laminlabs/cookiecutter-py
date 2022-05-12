@@ -55,7 +55,15 @@ def install_pre_commit_hooks():
 MESSAGE = """
 Repository successfully created in directory {{ cookiecutter.repo_slug }} 🎉
 Please ask Alex or Sunny to launch https://lamin.ai/{{ cookiecutter.pkg_slug }} 👋📣
-Browse to {{ cookiecutter.repo_slug }}/docs/tasks/ and get started on a first task! 🤩💪😎
+
+You can now already initialize the project using the following lines:
+
+cd {{ cookiecutter.repo_slug }}
+gitmoji -i
+git add .
+git commit -m "Initial commit"
+
+Get started with a first task in {{ cookiecutter.repo_slug }}/docs/tasks/ 🤩💪😎
 """
 
 if __name__ == "__main__":
@@ -85,8 +93,9 @@ if __name__ == "__main__":
     with open(github_workflow, "w") as f:
         f.write(modified)
 
-    execute(
-        "gitmoji", "-i", cwd=PROJECT_DIRECTORY, supress_exception=True
-    )  # gitmoji seems to write to error
+    # The following doesn't yet work automatically!
+    # execute(
+    #     "gitmoji", "-i", cwd=PROJECT_DIRECTORY, supress_exception=True
+    # )
 
     print(MESSAGE)
