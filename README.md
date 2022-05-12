@@ -1,3 +1,3 @@
 # cookiecutter-py: Lamin template for Python
 
-See the [documentation](https://lamin.ai/cookiecutter-py).
+Read the [docs](https://lamin.ai/cookiecutter-py).

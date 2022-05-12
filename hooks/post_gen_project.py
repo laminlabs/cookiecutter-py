@@ -71,3 +71,17 @@ if __name__ == "__main__":
             " your self. For more on pre-commit, please refer to"
             " https://pre-commit.com"
         )
+
+    github_workflow = os.path.join(PROJECT_DIRECTORY, ".github/workflows/build.yml")
+    with open(github_workflow, "r") as f:
+        original = f.read()
+    modified = original.replace("cookiecutter.pkg_slug", "{{ cookiecutter.pkg_slug }}")
+    with open(github_workflow, "w") as f:
+        f.write(modified)
+
+    print(
+        "\nRepository successfully created in directory: {{ cookiecutter.repo_slug }}"
+        " 🎉\nPlease ask Alex or Sunny to hook up the docs site: https://lamin.ai/{{"
+        " cookiecutter.pkg_slug }} 👋📣\nBrowse to {{ cookiecutter.repo_slug"
+        " }}/docs/tasks/ and get started on a first task! 🤩💪😎\n"
+    )
