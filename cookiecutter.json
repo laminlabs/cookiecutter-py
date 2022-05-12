@@ -1,7 +1,8 @@
 {
-  "project_name": "Package name",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-  "pkg_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "description": "Description",
-  "license": ["Apache-2.0", "not open source"]
+  "repo_slug": null,
+  "pkg_slug": "{{ cookiecutter.repo_slug.lower().replace(' ', '-') }}",
+  "pkg_name": "{{ cookiecutter.pkg_slug.lower().replace(' ', '_').replace('-', '_') }}",
+  "description": null,
+  "license": ["not open source", "Apache-2.0"],
+  "_copy_without_render": [".github/workflows/*.yml"]
 }

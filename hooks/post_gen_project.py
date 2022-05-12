@@ -54,7 +54,7 @@ def install_pre_commit_hooks():
 
 if __name__ == "__main__":
 
-    if "not open source" == "{{ cookiecutter.open_source_license }}":
+    if "not open source" == "{{ cookiecutter.license }}":
         remove_file("LICENSE")
 
     try:
