@@ -68,8 +68,7 @@ cd {{ cookiecutter.repo_slug }}
 gitmoji -i
 git add .
 git commit -m "Initial commit"
-git submodule init
-git submodule update
+git submodule add https://github.com/laminlabs/lamin-sphinx docs/lamin_sphinx
 git remote add origin https://github.com/laminlabs/{{ cookiecutter.repo_slug }}
 git branch -M main
 git push -u origin main
