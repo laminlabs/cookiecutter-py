@@ -68,6 +68,8 @@ cd {{ cookiecutter.repo_slug }}
 gitmoji -i
 git add .
 git commit -m "Initial commit"
+git submodule init
+git submodule update
 git remote add origin https://github.com/laminlabs/{{ cookiecutter.repo_slug }}
 git branch -M main
 git push -u origin main
