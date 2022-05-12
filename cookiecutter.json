@@ -1,6 +1,6 @@
 {
-  "repo_slug": null,
-  "pkg_slug": "{{ cookiecutter.repo_slug.lower().replace(' ', '-') }}",
+  "repo_slug": "collab-? or something else?",
+  "pkg_slug": "{{ cookiecutter.repo_slug.replace('collab-', '') }}",
   "pkg_name": "{{ cookiecutter.pkg_slug.lower().replace(' ', '_').replace('-', '_') }}",
   "description": null,
   "license": ["not open source", "Apache-2.0"],
