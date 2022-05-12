@@ -61,8 +61,6 @@ Repository successfully created in directory {{ cookiecutter.repo_slug }}! 🎉
    description "{{ cookiecutter.description }}."
    Ignore the suggestions from GitHub!
 3. Initialize the project by copying the below to the command line.
-   When gitmoji asks you to select an emoji, select "🎉 - Begin a project".
-   Check out https://gitmoji.dev/ if you don't yet know about it!
 
 cd {{ cookiecutter.repo_slug }}
 git add .
