@@ -45,6 +45,8 @@ repos:
     hooks:
       - id: mypy
   - repo: https://github.com/pycqa/pydocstyle
-    rev: 6.1.1 # pick a git hash / tag to point to
+    rev: 6.1.1
     hooks:
       - id: pydocstyle
+        args: # google style + __init__, see http://www.pydocstyle.org/en/stable/error_codes.html
+          - --ignore=D107,D203,D204,D213,D215,D400,D401,D404,D406,D407,D408,D409,D413
