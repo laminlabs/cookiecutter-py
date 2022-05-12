@@ -62,8 +62,12 @@ cd {{ cookiecutter.repo_slug }}
 gitmoji -i
 git add .
 git commit -m "Initial commit"
+git remote add origin https://github.com/laminlabs/{{ cookiecutter.repo_slug }}
+git branch -M main
+git push -u origin main
 
 Get started with a first task in {{ cookiecutter.repo_slug }}/docs/tasks/ 🤩💪😎
+Make a PR for every task and squash merge them to the main branch! 🧐😅
 """
 
 if __name__ == "__main__":
