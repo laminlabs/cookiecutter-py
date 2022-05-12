@@ -85,6 +85,8 @@ if __name__ == "__main__":
     with open(github_workflow, "w") as f:
         f.write(modified)
 
-    execute("gitmoji", "-i", cwd=PROJECT_DIRECTORY)
+    execute(
+        "gitmoji", "-i", cwd=PROJECT_DIRECTORY, supress_exception=True
+    )  # gitmoji seems to write to error
 
     print(MESSAGE)
