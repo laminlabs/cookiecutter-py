@@ -58,7 +58,7 @@ Repository successfully created in directory {{ cookiecutter.repo_slug }}! 🎉
 1. Ask Alex or Sunny to connect https://lamin.ai/{{ cookiecutter.pkg_slug }} 👋📣
 2. Open https://github.com/organizations/laminlabs/repositories/new, and make a
    *private empty* repository with name "{{ cookiecutter.repo_slug }}" and
-   description "{{ cookiecutter.description }}"
+   description "{{ cookiecutter.description }}."
    Ignore the suggestions from GitHub!
 3. Initialize the project by copying the below to the command line.
    When gitmoji asks you to select an emoji, select "🎉 - Begin a project".

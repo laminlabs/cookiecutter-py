@@ -9,7 +9,7 @@ import {{ cookiecutter.pkg_name}}  # noqa
 
 project = "{{ cookiecutter.pkg_slug}}"
 html_title = f"{project} | Lamin Labs"
-release = cookiecutter_py.__version__
+release = {{ cookiecutter.pkg_name}}.__version__
 html_context["github_repo"] = "{{ cookiecutter.repo_slug}}"  # noqa
 
 ogp_site_url = f"https://lamin.ai/{project}"
