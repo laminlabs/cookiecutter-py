@@ -52,9 +52,33 @@ def install_pre_commit_hooks():
     execute(sys.executable, "-m", "pre_commit", "install")
 
 
+MESSAGE = """
+Repository successfully created in directory {{ cookiecutter.repo_slug }}! 🎉
+
+1. Ask Alex or Sunny to connect https://lamin.ai/{{ cookiecutter.pkg_slug }} 👋📣
+2. Open https://github.com/organizations/laminlabs/repositories/new, and make a
+   *private empty* repository with name "{{ cookiecutter.repo_slug }}" and
+   description "{{ cookiecutter.description }}"
+   Ignore the suggestions from GitHub!
+3. Initialize the project by copying the below to the command line.
+   When gitmoji asks you to select an emoji, select "🎉 - Begin a project".
+   Check out https://gitmoji.dev/ if you don't yet know about it!
+
+cd {{ cookiecutter.repo_slug }}
+gitmoji -i
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/laminlabs/{{ cookiecutter.repo_slug }}
+git branch -M main
+git push -u origin main
+
+4. Get started with a task in {{ cookiecutter.repo_slug }}/docs/tasks/ 🤩💪😎
+   Make a PR for every task and squash merge them to the main branch! 🧐😅
+"""
+
 if __name__ == "__main__":
 
-    if "not open source" == "{{ cookiecutter.open_source_license }}":
+    if "not open source" == "{{ cookiecutter.license }}":
         remove_file("LICENSE")
 
     try:
@@ -71,3 +95,17 @@ if __name__ == "__main__":
             " your self. For more on pre-commit, please refer to"
             " https://pre-commit.com"
         )
+
+    github_workflow = os.path.join(PROJECT_DIRECTORY, ".github/workflows/build.yml")
+    with open(github_workflow, "r") as f:
+        original = f.read()
+    modified = original.replace("cookiecutter.pkg_slug", "{{ cookiecutter.pkg_slug }}")
+    with open(github_workflow, "w") as f:
+        f.write(modified)
+
+    # The following doesn't yet work automatically!
+    # execute(
+    #     "gitmoji", "-i", cwd=PROJECT_DIRECTORY, supress_exception=True
+    # )
+
+    print(MESSAGE)
