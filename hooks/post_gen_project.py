@@ -52,7 +52,7 @@ def install_pre_commit_hooks():
     execute(sys.executable, "-m", "pre_commit", "install")
 
 
-MESSAGE = """\n
+MESSAGE = """
 Repository successfully created in directory {{ cookiecutter.repo_slug }} 🎉
 Please ask Alex or Sunny to launch https://lamin.ai/{{ cookiecutter.pkg_slug }} 👋📣
 Browse to {{ cookiecutter.repo_slug }}/docs/tasks/ and get started on a first task! 🤩💪😎
