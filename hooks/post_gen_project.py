@@ -52,6 +52,12 @@ def install_pre_commit_hooks():
     execute(sys.executable, "-m", "pre_commit", "install")
 
 
+MESSAGE = """\n
+Repository successfully created in directory {{ cookiecutter.repo_slug }} 🎉
+Please ask Alex or Sunny to launch https://lamin.ai/{{ cookiecutter.pkg_slug }} 👋📣
+Browse to {{ cookiecutter.repo_slug }}/docs/tasks/ and get started on a first task! 🤩💪😎
+"""
+
 if __name__ == "__main__":
 
     if "not open source" == "{{ cookiecutter.license }}":
@@ -79,9 +85,4 @@ if __name__ == "__main__":
     with open(github_workflow, "w") as f:
         f.write(modified)
 
-    print(
-        "\nRepository successfully created in directory: {{ cookiecutter.repo_slug }}"
-        " 🎉\nPlease ask Alex or Sunny to hook up the docs site: https://lamin.ai/{{"
-        " cookiecutter.pkg_slug }} 👋📣\nBrowse to {{ cookiecutter.repo_slug"
-        " }}/docs/tasks/ and get started on a first task! 🤩💪😎\n"
-    )
+    print(MESSAGE)
