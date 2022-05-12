@@ -1,30 +1,36 @@
 import re
 import sys
 
-MODULE_REGEX = r"^[_a-zA-Z][_a-zA-Z0-9]+$"
+n_errors = 0
 
-module_name = "{{ cookiecutter.pkg_name}}"
+package_REGEX = r"^[_a-zA-Z][_a-zA-Z0-9]+$"
+slug_REGEX = r"^[-a-zA-Z][-a-zA-Z0-9]+$"
+package_name = "{{ cookiecutter.package_name }}"
+project_slug = "{{ cookiecutter.project_slug }}"
+repo_slug = "{{ cookiecutter.repo_slug }}"
 
-if not re.match(MODULE_REGEX, module_name):
+if not re.match(package_REGEX, package_name):
     print(
-        "ERROR: The pkg name (%s) is not a valid Python module name. Please do not use"
-        " a - and use _ instead" % module_name
+        "\nERROR: The package_name is invalid. Do not use '-' and"
+        " spaces, use '_' instead!"
     )
+    n_errors += 1
 
-    # Exit to cancel project
-    sys.exit(1)
-
-
-SLUG_REGEX = r"^[-a-zA-Z][-a-zA-Z0-9]+$"
-
-pkg_slug = "{{ cookiecutter.pkg_slug}}"
-repo_slug = "{{ cookiecutter.repo_slug}}"
-
-if not re.match(SLUG_REGEX, pkg_slug) or not re.match(SLUG_REGEX, repo_slug):
+if not re.match(slug_REGEX, project_slug) or not re.match(slug_REGEX, repo_slug):
     print(
-        "ERROR: The pkg_slug or repo_slug are not valid. Please do not use '_' and"
+        "\nERROR: `project_slug` or `repo_slug` are not valid. Do not use '_' and"
         " spaces, use '-'!"
     )
+    n_errors += 1
 
-    # Exit to cancel project
+if "{{ cookiecutter.description }}".endswith("."):
+    print("\nERROR: Enter `description` without ending period.")
+    n_errors += 1
+
+if len("{{ cookiecutter.description }}") > 50:
+    print("\nERROR: `description` needs to be <=50 characters.")
+    n_errors += 1
+
+if n_errors > 0:
+    print("\n")
     sys.exit(1)

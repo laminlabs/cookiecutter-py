@@ -1,11 +1,17 @@
 # Changelog
 
-## 0.1: Set up collaboration projects
+## 0.1 | 2022-05-13
 
-### 0.1.1
+Enable to set up canonical collaboration projects with tasks, guides, an API, and a change log.
 
-A few bug fixes.
+### 0.1.3 | 2022-05-13
 
-### 0.1.0
+Clearer variable names, clearer dialogue, more examples.
+
+### 0.1.1 | 2022-05-12
+
+Several bug fixes.
+
+### 0.1.0 | 2022-05-12
 
 A first essentially feature-complete version.

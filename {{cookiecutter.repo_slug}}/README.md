@@ -1,3 +1,3 @@
-# {{ cookiecutter.pkg_slug }}: {{ cookiecutter.description }}
+# {{ cookiecutter.project_slug }}: {{ cookiecutter.description }}
 
-Read the [docs](https://lamin.ai/{{ cookiecutter.pkg_slug }}).
+Read the [docs](https://lamin.ai/{{ cookiecutter.project_slug }}).
