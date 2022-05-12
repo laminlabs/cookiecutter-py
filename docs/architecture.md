@@ -8,14 +8,14 @@
 - [gitmoji](https://gitmoji.dev/): Let others quickly grasp the type of PRs and commits you make!
 - GitHub Actions auto-builds.
 
-Not yet integrated:
+We'll soon also integrate:
 
-- [isort](https://github.com/PyCQA/isort)
+- Sort imports [isort](https://github.com/PyCQA/isort).
 - Code coverage report and endorsed by [Codecov](https://codecov.io)
 - Check static type with [Mypy](http://mypy-lang.org/) (optional)
 - [bump2version](https://github.com/c4urself/bump2version): Pre-configured version bumping with a single command
 
 ## Credits
 
-- This template is based on the pydata-sphinx-theme, the furo theme, tiangolo's Python setup and on https://github.com/waynerv/cookiecutter-pypackage/.
-- The last cookiecutter is based on https://github.com/zillionare/cookiecutter-pypackage/, which was based on https://github.com/audreyfeldroy/cookiecutter-pypackage.
+This template is based on the pydata-sphinx-theme, the furo theme, tiangolo's setup and [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage).
+The latter is based on [zillionare/cookiecutter-pypackage](https://github.com/zillionare/cookiecutter-pypackage), which was based on [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage).
