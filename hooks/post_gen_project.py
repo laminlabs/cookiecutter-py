@@ -67,8 +67,8 @@ Repository successfully created in directory {{ cookiecutter.repo_slug }}! 🎉
 cd {{ cookiecutter.repo_slug }}
 gitmoji -i
 git add .
-git commit -m "Initial commit"
 git submodule add https://github.com/laminlabs/lamin-sphinx docs/lamin_sphinx
+git commit -m "Initial commit"
 git remote add origin https://github.com/laminlabs/{{ cookiecutter.repo_slug }}
 git branch -M main
 git push -u origin main
