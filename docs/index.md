@@ -12,4 +12,5 @@
 
 get-started
 architecture
+changelog
 ```

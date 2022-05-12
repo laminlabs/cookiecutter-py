@@ -10,4 +10,5 @@
 tasks/index
 guides/index
 api
+changelog
 ```
