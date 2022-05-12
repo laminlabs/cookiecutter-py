@@ -85,4 +85,6 @@ if __name__ == "__main__":
     with open(github_workflow, "w") as f:
         f.write(modified)
 
+    execute("gitmoji", "-i", cwd=PROJECT_DIRECTORY)
+
     print(MESSAGE)

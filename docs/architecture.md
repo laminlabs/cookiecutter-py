@@ -1,16 +1,17 @@
 # Architecture
 
-- Sphinx with https://myst-nb.readthedocs.io/ and an adopted https://pydata-sphinx-theme.readthedocs.io.
-- Testing with [Pytest](https://pytest.org) (unittest is still supported out of the box)
-- Code coverage report and endorsed by [Codecov](https://codecov.io)
-- [nox](https://nox.thea.codes/): Test your code against environment matrix, lint and artifact check
-- Format with [Black](https://github.com/psf/black) and [Isort](https://github.com/PyCQA/isort)
-- Lint code with [Flake8](https://flake8.pycqa.org) and [Flake8-docstrings](https://pypi.org/project/flake8-docstrings/)
-- [flit](https://python-poetry.org/): Manage releases
-- [Pre-commit hooks](https://pre-commit.com/): Formatting/linting anytime when commit your code
+- Docs that heavily use [myst-nb](https://myst-nb.readthedocs.io/). Our theme is based on [pydata-sphinx](https://pydata-sphinx-theme.readthedocs.io).
+- [nox](https://nox.thea.codes/): Organize builds with virtual environment. Within, test using [pytest](https://pytest.org).
+- Format with [black](https://github.com/psf/black) and lint code with [flake8](https://flake8.pycqa.org).
+- [flit](https://python-poetry.org/): Manage releases.
+- [pre-commit](https://pre-commit.com/): Formatting/linting anytime when commit your code.
+- [gitmoji](https://gitmoji.dev/): Let others quickly grasp the type of PRs and commits you make!
+- GitHub Actions auto-builds.
 
 Not yet integrated:
 
+- [isort](https://github.com/PyCQA/isort)
+- Code coverage report and endorsed by [Codecov](https://codecov.io)
 - Check static type with [Mypy](http://mypy-lang.org/) (optional)
 - [bump2version](https://github.com/c4urself/bump2version): Pre-configured version bumping with a single command
 
