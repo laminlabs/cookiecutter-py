@@ -55,7 +55,7 @@ def install_pre_commit_hooks():
 MESSAGE = """
 Repository successfully created in directory {{ cookiecutter.repo_slug }}! 🎉
 
-1. Ask Alex or Sunny to connect https://lamin.ai/{{ cookiecutter.pkg_slug }} 👋📣
+1. Ask Alex or Sunny to connect https://lamin.ai/{{ cookiecutter.project_slug }} 👋📣
 2. Open https://github.com/organizations/laminlabs/repositories/new, and make a
    *private empty* repository with name "{{ cookiecutter.repo_slug }}" and
    description "{{ cookiecutter.description }}."
@@ -100,7 +100,9 @@ if __name__ == "__main__":
     github_workflow = os.path.join(PROJECT_DIRECTORY, ".github/workflows/build.yml")
     with open(github_workflow, "r") as f:
         original = f.read()
-    modified = original.replace("cookiecutter.pkg_slug", "{{ cookiecutter.pkg_slug }}")
+    modified = original.replace(
+        "cookiecutter.project_slug", "{{ cookiecutter.project_slug }}"
+    )
     with open(github_workflow, "w") as f:
         f.write(modified)
 

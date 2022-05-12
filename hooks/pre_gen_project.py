@@ -3,7 +3,7 @@ import sys
 
 MODULE_REGEX = r"^[_a-zA-Z][_a-zA-Z0-9]+$"
 
-module_name = "{{ cookiecutter.pkg_name}}"
+module_name = "{{ cookiecutter.package_name}}"
 
 if not re.match(MODULE_REGEX, module_name):
     print(
@@ -17,12 +17,12 @@ if not re.match(MODULE_REGEX, module_name):
 
 SLUG_REGEX = r"^[-a-zA-Z][-a-zA-Z0-9]+$"
 
-pkg_slug = "{{ cookiecutter.pkg_slug}}"
+project_slug = "{{ cookiecutter.project_slug}}"
 repo_slug = "{{ cookiecutter.repo_slug}}"
 
-if not re.match(SLUG_REGEX, pkg_slug) or not re.match(SLUG_REGEX, repo_slug):
+if not re.match(SLUG_REGEX, project_slug) or not re.match(SLUG_REGEX, repo_slug):
     print(
-        "ERROR: The pkg_slug or repo_slug are not valid. Please do not use '_' and"
+        "ERROR: The project_slug or repo_slug are not valid. Please do not use '_' and"
         " spaces, use '-'!"
     )
 

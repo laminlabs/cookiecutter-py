@@ -19,8 +19,8 @@ The dialogue for setting up the `collab-doloromics` repository, which holds the 
 ```
 $ cookiecutter https://github.com/laminlabs/cookiecutter-py.git
 repo_slug [collab-? or something else?]: collab-doloromics
-pkg_slug [doloromics]: doloromics
-pkg_name [doloromics]: doloromics
+project_slug [doloromics]: doloromics
+package_name [doloromics]: doloromics
 description: Code for Doloromics
 Select license:
 1 - not open source
