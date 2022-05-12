@@ -100,7 +100,7 @@ cookiecutter-pypackage-env/
 # IDE settings
 .vscode/
 
-# mkdocs
-site/
-
-venv/
+# Lamin
+jupyter_execute/
+_build/
+docs/{{ cookiecutter.package_name }}.*
