@@ -12,7 +12,7 @@ def lint(session: nox.Session) -> None:
 
 @nox.session
 def build(session):
-    session.install(".[dev, test]")
+    session.install(".[dev,test]")
     session.run(
         "pytest",
         "--nbmake",

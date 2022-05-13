@@ -1,5 +1,5 @@
 # API
 
 ```{eval-rst}
-.. automodule:: maren
+.. automodule:: {{ cookiecutter.package_name }}
 ```
