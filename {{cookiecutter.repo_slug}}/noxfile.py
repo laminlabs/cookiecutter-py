@@ -1,4 +1,5 @@
 import nox
+from pathlib import Path
 
 nox.options.reuse_existing_virtualenvs = True
 
