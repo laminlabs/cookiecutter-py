@@ -4,7 +4,7 @@ from pathlib import Path
 import cookiecutter_py
 
 HERE = Path(__file__).parent
-sys.path[:0] = [str(HERE)]
+sys.path[:0] = [str(HERE), str(HERE.parent)]
 from lamin_sphinx import *  # noqa
 from lamin_sphinx import html_context  # noqa
 
