@@ -15,12 +15,19 @@ jobs:
         python-version: ["3.9"]
 
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v3
         with:
           submodules: recursive
           token: ${{ secrets.ACCESS_TOKEN_ALEX }}
           fetch-depth: 0
+      - name: Checkout lndocs
+        uses: actions/checkout@v3
+        with:
+          repository: laminlabs/lndocs
+          token: ${{ secrets.ACCESS_TOKEN_ALEX }} # change to ssh-key
+          path: lndocs
+          ref: main
       - name: Cache
         uses: actions/cache@v3
         env:
