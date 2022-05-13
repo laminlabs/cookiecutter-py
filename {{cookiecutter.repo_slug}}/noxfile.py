@@ -18,5 +18,11 @@ def build(session):
         "--nbmake",
         "--overwrite",
     )  # write output instead of capturing it (more verbose)
-    session.install("-r", "docs/lamin_sphinx/requirements.txt")
-    session.run(*"sphinx-build -b html docs _build/html".split())
+    if Path("./lndocs").exists():  # GitHub Actions prefers nesting
+        session.install("./lndocs")
+    else:
+        session.install("../lndocs")  # Locally we have a flat structure
+    session.install(
+        "git+https://github.com/pydata/pydata-sphinx-theme.git"
+    )  # just temporarily until the new release comes out
+    session.run("lndocs")
