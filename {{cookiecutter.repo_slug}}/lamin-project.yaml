@@ -1,5 +1,5 @@
 project_name: {{ cookiecutter.project_name }}
 description: {{ cookiecutter.description }}
-repo_slug: {{ cookiecutter.repo_slug }}
-repo_name: {{ cookiecutter.repo_name }}
+project_slug: {{ cookiecutter.project_slug }}
+repository_name: {{ cookiecutter.repository_name }}
 package_name: {{ cookiecutter.package_name }}
