@@ -99,3 +99,9 @@ ENV/
 # IDE settings
 .vscode/
 .idea/
+
+# Lamin
+_build
+docs/{{ cookiecutter.package_name }}.*
+lamin_sphinx
+docs/conf.py
