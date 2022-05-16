@@ -36,7 +36,7 @@ jobs:
           path: |
             .nox
             ~/.cache/pre-commit
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('docs/lamin_sphinx/requirements.txt') }}-${{ hashFiles('.pre-commit-config.yaml') }}-${{ hashFiles('pyproject.yaml') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('.pre-commit-config.yaml') }}-${{ hashFiles('pyproject.yaml') }}
       - name: Install pip and nox
         run: |
           python -m pip install --upgrade pip
@@ -46,7 +46,7 @@ jobs:
           nox -s lint
       - name: Build
         run: |
-          nox -s build
+          nox -s build --python {{ python-version }}
       - name: Change base URL to project-slug # for Netlify URL prettification
         if: github.event_name == 'push'
         run: |
