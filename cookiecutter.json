@@ -1,7 +1,7 @@
 {
   "project_name": null,
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-  "repo_slug": "collab-{{ cookiecutter.project_slug }}",
+  "repository_name": "collab-{{ cookiecutter.project_slug }}",
   "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "description": null,
   "license": ["not open source", "Apache-2.0"],
