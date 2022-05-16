@@ -104,3 +104,9 @@ cookiecutter-pypackage-env/
 jupyter_execute/
 _build/
 docs/{{ cookiecutter.package_name }}.*
+
+# Lamin
+_build
+docs/{{ cookiecutter.package_name }}.*
+lamin_sphinx
+docs/conf.py
