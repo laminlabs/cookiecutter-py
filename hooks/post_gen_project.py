@@ -53,24 +53,24 @@ def install_pre_commit_hooks():
 
 
 MESSAGE = """
-Repository successfully created in directory {{ cookiecutter.repo_slug }}! 🎉
+Repository successfully created in directory {{ cookiecutter.repository_name }}! 🎉
 
 1. Ask Alex or Sunny to connect https://lamin.ai/{{ cookiecutter.project_slug }} 👋📣
 2. Open https://github.com/organizations/laminlabs/repositories/new, and make a
-   *private empty* repository with name "{{ cookiecutter.repo_slug }}" and
+   *private empty* repository with name "{{ cookiecutter.repository_name }}" and
    description "{{ cookiecutter.description }}."
    Ignore the suggestions from GitHub!
 3. Initialize the project by copying the below to the command line.
 
-cd {{ cookiecutter.repo_slug }}
+cd {{ cookiecutter.repository_name }}
 git add .
 git commit -m "🎉 Initial commit"
-git remote add origin https://github.com/laminlabs/{{ cookiecutter.repo_slug }}
+git remote add origin https://github.com/laminlabs/{{ cookiecutter.repository_name }}
 git branch -M main
 git push -u origin main
 gitmoji -i
 
-4. Get started with a task in {{ cookiecutter.repo_slug }}/docs/tasks/ 🤩💪😎
+4. Get started with a task in {{ cookiecutter.repository_name }}/docs/tasks/ 🤩💪😎
    Make a PR for every task and squash merge them to the main branch! 🧐😅
 """
 

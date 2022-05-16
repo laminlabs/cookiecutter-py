@@ -20,7 +20,7 @@ Set up the `collab-maren` repository for the Maren project, which holds the `mar
 $ cookiecutter https://github.com/laminlabs/cookiecutter-py.git
 project_name: Maren
 project_slug [maren]:
-repo_slug [collab-maren]:
+repository_name [collab-maren]:
 package_name [maren]:
 description: Flow cytometry
 Select license:

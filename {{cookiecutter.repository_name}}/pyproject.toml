@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.urls]
-Home = "https://github.com/laminlabs/{{ cookiecutter.repo_slug }}"
+Home = "https://github.com/laminlabs/{{ cookiecutter.repository_name }}"
 
 [project.optional-dependencies]
 dev = [

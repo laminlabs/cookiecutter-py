@@ -7,7 +7,7 @@ package_REGEX = r"^[_a-zA-Z][_a-zA-Z0-9]+$"
 slug_REGEX = r"^[-a-zA-Z][-a-zA-Z0-9]+$"
 package_name = "{{ cookiecutter.package_name }}"
 project_slug = "{{ cookiecutter.project_slug }}"
-repo_slug = "{{ cookiecutter.repo_slug }}"
+repository_name = "{{ cookiecutter.repository_name }}"
 
 if not re.match(package_REGEX, package_name):
     print(
@@ -16,9 +16,9 @@ if not re.match(package_REGEX, package_name):
     )
     n_errors += 1
 
-if not re.match(slug_REGEX, project_slug) or not re.match(slug_REGEX, repo_slug):
+if not re.match(slug_REGEX, project_slug) or not re.match(slug_REGEX, repository_name):
     print(
-        "\nERROR: `project_slug` or `repo_slug` are not valid. Do not use '_' and"
+        "\nERROR: `project_slug` or `repository_name` are not valid. Do not use '_' and"
         " spaces, use '-'!"
     )
     n_errors += 1
