@@ -15,9 +15,6 @@ jobs:
         python-version: ["3.9"]
 
     steps:
-      - name: Log
-        run: |
-          echo ${{ matrix.python-version }}
       - name: Checkout main
         uses: actions/checkout@v3
         with:
@@ -60,6 +57,9 @@ jobs:
         with:
           file: lamin-project.yaml
           project_slug: project_slug
+      - name: Log
+        run: |
+          echo ${{ steps.lamin-project.outputs.project_slug }}
       - name: Change base URL to project-slug
         if: github.event_name == 'push'
         run: |
