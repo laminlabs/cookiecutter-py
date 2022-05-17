@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Log
         run: |
-          echo {{ matrix.python-version }}
+          echo ${{ matrix.python-version }}
       - name: Checkout main
         uses: actions/checkout@v3
         with:
@@ -49,7 +49,7 @@ jobs:
           nox -s lint
       - name: Build
         run: |
-          nox -s build --python {{ matrix.python-version }}
+          nox -s build --python ${{ matrix.python-version }}
       - name: Change base URL to project-slug # for Netlify URL prettification
         if: github.event_name == 'push'
         run: |
