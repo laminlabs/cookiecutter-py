@@ -15,6 +15,9 @@ jobs:
         python-version: ["3.9"]
 
     steps:
+      - name: Log
+        run: |
+          echo {{ matrix.python-version }}
       - name: Checkout main
         uses: actions/checkout@v3
         with:
