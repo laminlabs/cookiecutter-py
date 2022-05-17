@@ -38,7 +38,7 @@ jobs:
           path: |
             .nox
             ~/.cache/pre-commit
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('docs/lamin_sphinx/requirements.txt') }}-${{ hashFiles('.pre-commit-config.yaml') }}-${{ hashFiles('pyproject.yaml') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('.pre-commit-config.yaml') }}-${{ hashFiles('pyproject.yaml') }}
       - name: Install pip and nox
         run: |
           python -m pip install --upgrade pip
@@ -60,7 +60,7 @@ jobs:
         run: |
           mv _build/html _build/html_tmp
           mkdir _build/html
-          mv _build/html_tmp _build/html/"${{ steps.lamin-project.outputs.project_slug }}"
+          mv _build/html_tmp _build/html/${{ steps.lamin-project.outputs.project_slug }}
       - name: Deploy docs
         id: netlify
         uses: nwtgck/actions-netlify@v1.2
