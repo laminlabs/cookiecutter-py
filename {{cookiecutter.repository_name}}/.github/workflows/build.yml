@@ -26,6 +26,10 @@ jobs:
           ssh-key: ${{ secrets.READ_LNDOCS }}
           path: lndocs
           ref: main
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
       - name: Cache
         uses: actions/cache@v3
         env:
@@ -54,7 +58,6 @@ jobs:
       - name: Change base URL to project-slug
         if: github.event_name == 'push'
         run: |
-          echo "${{ steps.lamin-project.outputs.project_slug }}"
           mv _build/html _build/html_tmp
           mkdir _build/html
           mv _build/html_tmp _build/html/"${{ steps.lamin-project.outputs.project_slug }}"

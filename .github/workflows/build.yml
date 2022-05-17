@@ -58,7 +58,6 @@ jobs:
       - name: Change base URL to project-slug
         if: github.event_name == 'push'
         run: |
-          echo "${{ steps.lamin-project.outputs.project_slug }}"
           mv _build/html _build/html_tmp
           mkdir _build/html
           mv _build/html_tmp _build/html/"${{ steps.lamin-project.outputs.project_slug }}"
