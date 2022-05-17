@@ -57,9 +57,6 @@ jobs:
         with:
           file: lamin-project.yaml
           project_slug: project_slug
-      - name: Log
-        run: |
-          echo ${{ steps.lamin-project.outputs.project_slug }}
       - name: Change base URL to project-slug
         if: github.event_name == 'push'
         run: |
