@@ -1,2 +1,3 @@
 project_name: cookiecutter-py
 description: Python project template
+project_slug: cookiecutter-py
