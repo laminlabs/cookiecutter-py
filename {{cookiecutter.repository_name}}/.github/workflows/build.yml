@@ -18,14 +18,12 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v3
         with:
-          submodules: recursive
-          token: ${{ secrets.ACCESS_TOKEN_ALEX }}
           fetch-depth: 0
       - name: Checkout lndocs
         uses: actions/checkout@v3
         with:
           repository: laminlabs/lndocs
-          token: ${{ secrets.ACCESS_TOKEN_ALEX }} # change to ssh-key
+          ssh-key: ${{ secrets.READ_LNDOCS }}
           path: lndocs
           ref: main
       - name: Cache
