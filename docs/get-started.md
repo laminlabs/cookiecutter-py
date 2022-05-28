@@ -38,6 +38,7 @@ Repository successfully created in directory collab-maren! 🎉
 3. Initialize the project by copying the below to the command line.
 
 cd collab-maren
+pre-commit run --all-files
 git add .
 git commit -m "🎉 Initial commit"
 git remote add origin https://github.com/laminlabs/collab-maren
