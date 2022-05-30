@@ -1,5 +1,2 @@
-from {{ cookiecutter.package_name }} import __version__
-
-
-def test_version():
-    assert __version__ == "0.1a1"
+def test_dummy():
+    assert 1 == 1
