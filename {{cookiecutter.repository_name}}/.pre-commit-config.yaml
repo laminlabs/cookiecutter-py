@@ -3,6 +3,10 @@ repos:
     rev: v3.2.0
     hooks:
       - id: trailing-whitespace
+        exclude: |
+          (?x)(
+              .github/workflows/latest-changes.jinja2
+          )
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
