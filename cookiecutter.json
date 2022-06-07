@@ -5,5 +5,5 @@
   "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "description": null,
   "license": ["not open source", "Apache-2.0"],
-  "_copy_without_render": [".github/workflows/*.yml"]
+  "_copy_without_render": [".github/workflows/*.yml", "*.jinja2"]
 }
