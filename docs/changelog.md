@@ -2,7 +2,8 @@
 
 ## Latest changes
 
-* 👷 Auto-update changelog on PR. PR [#29](https://github.com/laminlabs/cookiecutter-py/pull/29) by [@falexwolf](https://github.com/falexwolf).
+- 👷 Auto-update changelog on PR. PR [#29](https://github.com/laminlabs/cookiecutter-py/pull/29) by [@falexwolf](https://github.com/falexwolf).
+
 ## 0.1 | 2022-05-13
 
 Enable to set up canonical collaboration projects with tasks, guides, an API, and a change log.
