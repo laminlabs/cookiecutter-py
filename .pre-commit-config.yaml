@@ -6,6 +6,7 @@ repos:
       - id: end-of-file-fixer
         exclude: |
           (?x)(
+              .github/workflows/latest-changes.jinja2|
               ^{{cookiecutter.repository_name}}/LICENSE
           )
       - id: check-yaml
