@@ -5,6 +5,7 @@
 <!-- prettier-ignore -->
 Name | PR | User | Date | Patch
 --- | --- | --- | --- | ---
+🏗️ Broaden default directories | [35](https://github.com/laminlabs/cookiecutter-py/pull/35) | [falexwolf](https://github.com/falexwolf) | 2022-06-09 |
 🚧 Update format of changelog | [34](https://github.com/laminlabs/cookiecutter-py/pull/34) | [falexwolf](https://github.com/falexwolf) | 2022-06-09 |
 
 ## 0.3 | 2022-06-07
