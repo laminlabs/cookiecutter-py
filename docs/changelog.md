@@ -5,6 +5,7 @@
 <!-- prettier-ignore -->
 Name | PR | User | Date | Patch
 --- | --- | --- | --- | ---
+🔧 Let isort use the black profile to avoid conflicts | [27](https://github.com/laminlabs/cookiecutter-py/pull/27) | [sunnyosun](https://github.com/sunnyosun) | 2022-06-02 |
 :arrow_up: Simplify noxfile | [26](https://github.com/laminlabs/cookiecutter-py/pull/26) | [falexwolf](https://github.com/falexwolf) | 2022-06-01 |
 🏗️ Broaden default directories | [35](https://github.com/laminlabs/cookiecutter-py/pull/35) | [falexwolf](https://github.com/falexwolf) | 2022-06-09 |
 🚧 Update format of changelog | [34](https://github.com/laminlabs/cookiecutter-py/pull/34) | [falexwolf](https://github.com/falexwolf) | 2022-06-09 |
