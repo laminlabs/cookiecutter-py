@@ -2,6 +2,10 @@
 
 ## Latest changes
 
+<!-- prettier-ignore -->
+Name | PR | User | Date | Patch
+--- | --- | --- | --- | ---
+
 ## 0.3 | 2022-06-07
 
 - 📝 Fix newline in auto-docs. [PR33](https://github.com/laminlabs/cookiecutter-py/pull/33) by [@falexwolf](https://github.com/falexwolf).
