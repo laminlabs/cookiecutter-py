@@ -5,6 +5,7 @@
 <!-- prettier-ignore -->
 Name | PR | User | Date | Patch
 --- | --- | --- | --- | ---
+:memo: Fix newline in auto-docs | [33](https://github.com/laminlabs/cookiecutter-py/pull/33) | [falexwolf](https://github.com/falexwolf) | 2022-06-07 |
 :green_heart: Fix latest-changes workflow | [30](https://github.com/laminlabs/cookiecutter-py/pull/30) | [falexwolf](https://github.com/falexwolf) | 2022-06-07 |
 👷 Auto-update changelog on PR | [29](https://github.com/laminlabs/cookiecutter-py/pull/29) | [falexwolf](https://github.com/falexwolf) | 2022-06-07 |
 🔧 Let isort use the black profile to avoid conflicts | [27](https://github.com/laminlabs/cookiecutter-py/pull/27) | [sunnyosun](https://github.com/sunnyosun) | 2022-06-02 |
