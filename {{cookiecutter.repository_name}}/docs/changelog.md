@@ -1,5 +1,5 @@
 # Changelog
 
-## Latest changes
-
-- 🎉 Initial commit
+<!-- prettier-ignore -->
+Name | PR | User | Date | Patch
+--- | --- | --- | --- | ---
