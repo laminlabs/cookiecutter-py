@@ -5,5 +5,5 @@ A step-wise pedagogic tutorial including a quickstart. The notebooks get execute
 ```{toctree}
 :maxdepth: 1
 
-quickstart.md
+quickstart
 ```
