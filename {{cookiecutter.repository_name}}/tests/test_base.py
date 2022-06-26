@@ -1,5 +1,7 @@
-from {{ cookiecutter.package_name }} import example_function
+from {{ cookiecutter.package_name }} import ExampleClass, example_function
 
 
 def test_dummy():
-        assert example_function("A") == "a"
+    assert example_function("A") == "a"
+    ex = ExampleClass(1)
+    assert ex.bar() == "hello"
