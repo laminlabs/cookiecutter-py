@@ -37,5 +37,5 @@ testpaths = [
 
 [tool.coverage.run]
 omit = [
-    ""{{ cookiecutter.package_name }}"/*",
+    "{{ cookiecutter.package_name }}/*",
 ]
