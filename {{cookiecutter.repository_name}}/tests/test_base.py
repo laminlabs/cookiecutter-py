@@ -1,2 +1,5 @@
+from {{ cookiecutter.package_name }} import example_function
+
+
 def test_dummy():
-    assert 1 == 1
+        assert example_function("A") == "a"
