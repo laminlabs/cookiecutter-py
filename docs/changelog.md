@@ -7,6 +7,7 @@ Auto-update changelog upon PR & broaden default directories.
 <!-- prettier-ignore -->
 Name | PR | User | Date | Patch
 --- | --- | --- | --- | ---
+👷 Setup Codecov in CI | [39](https://github.com/laminlabs/cookiecutter-py/pull/39) | [sunnyosun](https://github.com/sunnyosun) | 2022-06-26 |
 🏗️ Update default directories | [36](https://github.com/laminlabs/cookiecutter-py/pull/36) | [falexwolf](https://github.com/falexwolf) | 2022-06-25 |
 🏗️ Broaden default directories | [35](https://github.com/laminlabs/cookiecutter-py/pull/35) | [falexwolf](https://github.com/falexwolf) | 2022-06-09 | 0.3.1
 🚧 Update format of changelog | [34](https://github.com/laminlabs/cookiecutter-py/pull/34) | [falexwolf](https://github.com/falexwolf) | 2022-06-09 |
