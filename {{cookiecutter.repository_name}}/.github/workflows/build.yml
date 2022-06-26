@@ -52,7 +52,7 @@ jobs:
       - name: Codecov
         uses: codecov/codecov-action@v2
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}          
+          token: ${{ secrets.CODECOV_TOKEN }}
       - name: Read lamin-project.yaml
         id: lamin-project
         uses: CumulusDS/get-yaml-paths-action@v0.1.0
