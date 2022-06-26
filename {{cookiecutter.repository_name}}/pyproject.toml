@@ -21,6 +21,7 @@ dev = [
 ]
 test = [
     "pytest>=6.0",
+    "pytest-cov",
     "nbmake",
 ]
 
@@ -32,4 +33,9 @@ testpaths = [
     "tests",
     "docs/guides",
     "docs/tutorial",
+]
+
+[tool.coverage.run]
+omit = [
+    "{{ cookiecutter.package_name }}/*",
 ]
