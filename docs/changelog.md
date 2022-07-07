@@ -7,6 +7,7 @@ Auto-update changelog upon PR & broaden default directories.
 <!-- prettier-ignore -->
 Name | PR | User | Date | Patch
 --- | --- | --- | --- | ---
+:building_construction: Overhaul entire cookiecutter | [41](https://github.com/laminlabs/cookiecutter-py/pull/41) | [falexwolf](https://github.com/falexwolf) | 2022-07-07 |
 👷 Update coverage setup | [40](https://github.com/laminlabs/cookiecutter-py/pull/40) | [falexwolf](https://github.com/falexwolf) | 2022-06-26 |
 👷 Setup Codecov in CI | [39](https://github.com/laminlabs/cookiecutter-py/pull/39) | [sunnyosun](https://github.com/sunnyosun) | 2022-06-26 |
 🏗️ Update default directories | [36](https://github.com/laminlabs/cookiecutter-py/pull/36) | [falexwolf](https://github.com/falexwolf) | 2022-06-25 |
