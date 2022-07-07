@@ -22,7 +22,6 @@ dev = [
 test = [
     "pytest>=6.0",
     "pytest-cov",
-    "nbmake",
 ]
 
 [tool.black]
@@ -32,7 +31,7 @@ preview = true
 testpaths = [
     "tests",
     "docs/guides",
-    "docs/tutorial",
+    "docs/tutorials",
 ]
 
 [tool.coverage.run]

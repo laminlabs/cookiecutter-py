@@ -17,8 +17,7 @@ def build(session):
     session.install(".[dev,test]")
     session.run(
         "pytest",
-        "--nbmake",
-        "--overwrite",
+        "-s",
         "--cov={{ cookiecutter.package_name }}",
         "--cov-append",
         "--cov-report=term-missing",
