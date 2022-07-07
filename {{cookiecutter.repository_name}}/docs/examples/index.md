@@ -1,3 +1,13 @@
-# Examples
+# Examples and tasks
 
-These are real-world examples. The notebooks do not get used in CI for testing.
+These are real-world examples and tasks.
+
+The notebooks do **not** get executed in CI for testing because they involve large data.
+
+```{toctree}
+:maxdepth: 1
+:glob:
+:reversed:
+
+*
+```
