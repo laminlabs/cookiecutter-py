@@ -110,3 +110,4 @@ _build
 docs/{{ cookiecutter.package_name }}.*
 lamin_sphinx
 docs/conf.py
+_docs_tmp*
