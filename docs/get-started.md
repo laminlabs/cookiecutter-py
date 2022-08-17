@@ -28,9 +28,9 @@ Select license:
 2 - Apache-2.0
 Choose from 1, 2 [1]: 1
 
-Repository successfully created in directory collab-maren! 🎉
+Repository successfully created in directory `collab-maren`! 🎉
 
-1. Ask Alex or Sunny to connect https://lamin.ai/maren 👋📣
+1. Ask Alex or Sunny to connect https://lamin.ai/docs/maren 👋📣
 2. Open https://github.com/organizations/laminlabs/repositories/new, and make a
    *private empty* repository with name "collab-maren" and
    description "Flow cytometry."

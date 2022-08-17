@@ -55,7 +55,7 @@ def install_pre_commit_hooks():
 MESSAGE = """
 Repository successfully created in directory {{ cookiecutter.repository_name }}! 🎉
 
-1. Ask Alex or Sunny to connect https://lamin.ai/{{ cookiecutter.project_slug }} 👋📣
+1. Ask Alex or Sunny to connect https://lamin.ai/docs/{{ cookiecutter.project_slug }} 👋📣
 2. Open https://github.com/organizations/laminlabs/repositories/new, and make a
    *private empty* repository with name "{{ cookiecutter.repository_name }}" and
    description "{{ cookiecutter.description }}."
