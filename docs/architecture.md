@@ -10,10 +10,10 @@
 - Check static type with [mypy](http://mypy-lang.org/).
 - Strip notebooks with nbstripout. [TODO: need to exclude tasks directory!]
 - GitHub Actions auto-builds.
+- Code coverage, and linkage to [Codecov](https://codecov.io)
 
-We'll soon also integrate:
+We might also integrate:
 
-- Code coverage report and endorsed by [Codecov](https://codecov.io)
 - [bump2version](https://github.com/c4urself/bump2version): Pre-configured version bumping with a single command
 
 ## Credits

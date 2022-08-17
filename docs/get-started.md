@@ -49,6 +49,13 @@ gitmoji -i
    Make a PR for every task and squash merge them to the main branch! 🧐😅
 ```
 
+## Release process
+
+1. Make two changes to the codebase by setting the version string (`X.X.X`) in `mypackage/__init__.py` and `docs/changelog.md`. Use [semantic versioning](https://semver.org) with [Python versioning](https://peps.python.org/pep-0440/).
+2. Commit these two changes in a commit "Release version X.X.X" with a :bookmark: emoji and push them to GitHub.
+3. Publish to PyPI: `flit publish`
+4. Tag and push tag: `git tag X.X.X` and `git push origin X.X.X`
+
 ## Background
 
 To learn about all the components of your Python project, check out [architecture](architecture).
