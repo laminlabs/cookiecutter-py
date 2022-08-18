@@ -1,16 +1,15 @@
 # Architecture
 
-- Docs that heavily use [myst-nb](https://myst-nb.readthedocs.io/). Our theme is based on [pydata-sphinx](https://pydata-sphinx-theme.readthedocs.io).
-- [nox](https://nox.thea.codes/): Organize builds with virtual environment. Within, test using [pytest](https://pytest.org).
+- Docs that heavily use [myst-nb](https://myst-nb.readthedocs.io/). The [lndocs](https://github.com/laminlabs/lndocs) theme is based on the [pydata-sphinx-theme](https://pydata-sphinx-theme.readthedocs.io).
+- Organize builds with virtual environments using [nox](https://nox.thea.codes/). Test using [pytest](https://pytest.org).
 - Format with [black](https://github.com/psf/black) and lint code with [flake8](https://flake8.pycqa.org).
-- [flit](https://python-poetry.org/): Manage releases.
-- [pre-commit](https://pre-commit.com/): Formatting/linting anytime when commit your code.
-- [gitmoji](https://gitmoji.dev/): Let others quickly grasp the type of PRs and commits you make!
+- Manage releases with [flit](https://flit.pypa.io/en/latest/).
+- Lint anytime when you commit your code with [pre-commit](https://pre-commit.com/).
+- Let others quickly grasp the type of PRs and commits you make with [gitmoji](https://gitmoji.dev/).
 - Sort imports [isort](https://github.com/PyCQA/isort).
 - Check static type with [mypy](http://mypy-lang.org/).
-- Strip notebooks with nbstripout. [TODO: need to exclude tasks directory!]
-- GitHub Actions auto-builds.
-- Code coverage, and linkage to [Codecov](https://codecov.io)
+- Strip notebook outputs with nbstripout.
+- Code coverage, and linkage to [Codecov](https://codecov.io).
 
 We might also integrate:
 
