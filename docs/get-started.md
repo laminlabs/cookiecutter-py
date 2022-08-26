@@ -59,3 +59,10 @@ gitmoji -i
 ## Background
 
 To learn about all the components of your Python project, check out [architecture](architecture).
+
+## Migrate schema modules
+
+For instance, in the root of `lnschema-core`:
+
+1. `python -m alembic revision --autogenerate -m "vX.X.X"`
+2. `python -m alembic upgrade head`
