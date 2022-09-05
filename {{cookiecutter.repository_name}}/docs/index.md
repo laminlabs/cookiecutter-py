@@ -12,15 +12,15 @@ You'll probably not need all the different types of directories here.
 
 Just make sure what each of them is supposed to provide.
 
-The organization roughly follows [diataxis](https://diataxis.fr/):
+The organization roughly follows [diataxis](https://diataxis.fr/), calling what diataxis calls "tutorials" guide, and what diataxis calls "guides" FAQ.
 
 ```{toctree}
 :maxdepth: 1
 :hidden:
 
-tutorials/index
+guide/index
 api
-guides/index
+faq/index
 notes/index
 examples/index
 changelog
