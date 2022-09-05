@@ -1,4 +1,4 @@
-# Tutorials
+# Guide
 
 A step-wise pedagogic tutorial including a quickstart. The notebooks get executed in CI for testing.
 
