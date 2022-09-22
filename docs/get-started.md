@@ -64,7 +64,7 @@ To learn about all the components of your Python project, check out [architectur
 
 For instance, in the root of `lnschema-core`:
 
-1. `python -m alembic --name yvzi revision --autogenerate -m "vX.X.X"`
-2. `python -m alembic --name yvzi upgrade head`
+1. `python -m alembic --config lnschema_core/alembic.ini --name yvzi revision --autogenerate -m "vX.X.X"`
+2. `python -m alembic --config lnschema_core/alembic.ini --name yvzi upgrade head`
 
 Replace "yvzi" with the module ID of your schema module.
