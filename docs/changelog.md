@@ -7,6 +7,7 @@ Auto-update changelog upon PR & broaden default directories.
 <!-- prettier-ignore -->
 Name | PR | User | Date | Patch
 --- | --- | --- | --- | ---
+Add missing login_testuser2 import | [43](https://github.com/laminlabs/cookiecutter-py/pull/43) | [Zethson](https://github.com/Zethson) | 2023-02-24 |
 👷 Expand CI across multiple Python versions | [42](https://github.com/laminlabs/cookiecutter-py/pull/42) | [falexwolf](https://github.com/falexwolf) | 2022-07-17 |
 :building_construction: Overhaul entire cookiecutter | [41](https://github.com/laminlabs/cookiecutter-py/pull/41) | [falexwolf](https://github.com/falexwolf) | 2022-07-07 |
 👷 Update coverage setup | [40](https://github.com/laminlabs/cookiecutter-py/pull/40) | [falexwolf](https://github.com/falexwolf) | 2022-06-26 |
