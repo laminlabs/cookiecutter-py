@@ -1,5 +1,5 @@
 import nox
-from laminci import move_built_docs_to_docs_slash_project_slug, upload_docs_dir
+from laminci import move_built_docs_to_docs_slash_project_slug, upload_docs_artifact
 from laminci.nox import (
     build_docs,
     login_testuser1,
@@ -25,5 +25,5 @@ def build(session):
     session.install(".[dev,test]")
     run_pytest(session)
     build_docs(session)
-    upload_docs_dir()
+    upload_docs_artifact()
     move_built_docs_to_docs_slash_project_slug()
