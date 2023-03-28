@@ -19,7 +19,7 @@ The organization roughly follows [diataxis](https://diataxis.fr/), calling what 
 :hidden:
 
 guide/index
-api
+reference
 faq/index
 notes/index
 examples/index
