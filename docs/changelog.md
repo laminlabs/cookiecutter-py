@@ -7,6 +7,7 @@ Auto-update changelog upon PR & broaden default directories.
 <!-- prettier-ignore -->
 Name | PR | User | Date | Patch
 --- | --- | --- | --- | ---
+Add pre-commit | [46](https://github.com/laminlabs/cookiecutter-py/pull/46) | [Zethson](https://github.com/Zethson) | 2023-03-30 |
 Add create workflow | [45](https://github.com/laminlabs/cookiecutter-py/pull/45) | [Zethson](https://github.com/Zethson) | 2023-03-30 |
 Add missing login_testuser2 import | [43](https://github.com/laminlabs/cookiecutter-py/pull/43) | [Zethson](https://github.com/Zethson) | 2023-02-24 |
 👷 Expand CI across multiple Python versions | [42](https://github.com/laminlabs/cookiecutter-py/pull/42) | [falexwolf](https://github.com/falexwolf) | 2022-07-17 |
