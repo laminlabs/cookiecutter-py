@@ -55,6 +55,7 @@ gitmoji -i
 2. Commit these two changes in a commit "Release version X.X.X" with a :bookmark: emoji and push them to GitHub.
 3. Publish to PyPI: `flit publish`
 4. Tag and push tag: `git tag X.X.X` and `git push origin X.X.X`
+5. Make a release on Github. Using the "generate release notes" button is fine.
 
 ## Background
 
