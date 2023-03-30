@@ -25,8 +25,16 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install cookiecutter
-        run: pip install cookiecutter
+      - name: Install cookiecutter pre-commit
+        run: pip install cookiecutter pre-commit
 
       - name: Create template
         run: echo -e "newproject\nnewproject\nrepository\nnewproject\ndescription\n1" | cookiecutter .
+
+      - name: Run pre-commit
+        run: |
+          cd repository
+          git init
+          git add .
+          pre-commit install
+          pre-commit run --all
