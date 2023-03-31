@@ -68,7 +68,4 @@ repos:
     hooks:
       - id: pyupgrade
         description: Automatically upgrade syntax for newer versions.
-        entry: pyupgrade
-        language: system
-        types: [python]
         args: [--py38-plus]
