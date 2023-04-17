@@ -1,5 +1,6 @@
 # Architecture
 
+-   [Cruft](https://github.com/cruft/cruft) for template syncing
 -   Docs that heavily use [myst-nb](https://myst-nb.readthedocs.io/). The [lndocs](https://github.com/laminlabs/lndocs) theme is based on the [pydata-sphinx-theme](https://pydata-sphinx-theme.readthedocs.io).
 -   Organize builds with virtual environments using [nox](https://nox.thea.codes/). Test using [pytest](https://pytest.org).
 -   Format with [black](https://github.com/psf/black) and lint code with [ruff](https://github.com/charliermarsh/ruff).

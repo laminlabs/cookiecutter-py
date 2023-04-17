@@ -1,15 +1,15 @@
 # Get started
 
-Install `cookiecutter`:
+Install `cruft` and `pre-commit`:
 
 ```
-pip install cookiecutter
+pip install cruft pre-commit
 ```
 
 Generate a Python package project:
 
 ```
-cookiecutter https://github.com/laminlabs/cookiecutter-py.git
+cruft create https://github.com/laminlabs/cookiecutter-py.git
 ```
 
 ## Example
@@ -17,7 +17,7 @@ cookiecutter https://github.com/laminlabs/cookiecutter-py.git
 Set up the `collab-maren` repository for the Maren project, which holds the `maren` package:
 
 ```
-$ cookiecutter https://github.com/laminlabs/cookiecutter-py.git
+$ cruft create https://github.com/laminlabs/cookiecutter-py.git
 project_name: Maren
 project_slug [maren]:
 repository_name [collab-maren]:
