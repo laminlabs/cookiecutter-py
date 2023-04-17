@@ -1,19 +1,19 @@
 # Architecture
 
-- Docs that heavily use [myst-nb](https://myst-nb.readthedocs.io/). The [lndocs](https://github.com/laminlabs/lndocs) theme is based on the [pydata-sphinx-theme](https://pydata-sphinx-theme.readthedocs.io).
-- Organize builds with virtual environments using [nox](https://nox.thea.codes/). Test using [pytest](https://pytest.org).
-- Format with [black](https://github.com/psf/black) and lint code with [flake8](https://flake8.pycqa.org).
-- Manage releases with [flit](https://flit.pypa.io/en/latest/).
-- Lint anytime when you commit your code with [pre-commit](https://pre-commit.com/).
-- Let others quickly grasp the type of PRs and commits you make with [gitmoji](https://gitmoji.dev/).
-- Sort imports [isort](https://github.com/PyCQA/isort).
-- Check static type with [mypy](http://mypy-lang.org/).
-- Strip notebook outputs with nbstripout.
-- Code coverage, and linkage to [Codecov](https://codecov.io).
+-   Docs that heavily use [myst-nb](https://myst-nb.readthedocs.io/). The [lndocs](https://github.com/laminlabs/lndocs) theme is based on the [pydata-sphinx-theme](https://pydata-sphinx-theme.readthedocs.io).
+-   Organize builds with virtual environments using [nox](https://nox.thea.codes/). Test using [pytest](https://pytest.org).
+-   Format with [black](https://github.com/psf/black) and lint code with [flake8](https://flake8.pycqa.org).
+-   Manage releases with [flit](https://flit.pypa.io/en/latest/).
+-   Lint anytime when you commit your code with [pre-commit](https://pre-commit.com/).
+-   Let others quickly grasp the type of PRs and commits you make with [gitmoji](https://gitmoji.dev/).
+-   Sort imports [isort](https://github.com/PyCQA/isort).
+-   Check static type with [mypy](http://mypy-lang.org/).
+-   Strip notebook outputs with nbstripout.
+-   Code coverage, and linkage to [Codecov](https://codecov.io).
 
 We might also integrate:
 
-- [bump2version](https://github.com/c4urself/bump2version): Pre-configured version bumping with a single command
+-   [bump2version](https://github.com/c4urself/bump2version): Pre-configured version bumping with a single command
 
 ## Credits
 

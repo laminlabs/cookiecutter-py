@@ -1,40 +1,40 @@
 name: Create template
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.9"]
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                python-version: ["3.9"]
 
-    steps:
-      - name: Checkout main
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        steps:
+            - name: Checkout main
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
+            - name: Setup Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: ${{ matrix.python-version }}
 
-      - name: Install cookiecutter pre-commit
-        run: pip install cookiecutter pre-commit
+            - name: Install cookiecutter pre-commit
+              run: pip install cookiecutter pre-commit
 
-      - name: Create template
-        run: echo -e "newproject\nnewproject\nrepository\nnewproject\ndescription\n1" | cookiecutter .
+            - name: Create template
+              run: echo -e "newproject\nnewproject\nrepository\nnewproject\ndescription\n1" | cookiecutter .
 
-      - name: Run pre-commit
-        run: |
-          cd repository
-          git init
-          git add .
-          pre-commit install
-          pre-commit run --all
+            - name: Run pre-commit
+              run: |
+                  cd repository
+                  git init
+                  git add .
+                  pre-commit install
+                  pre-commit run --all
