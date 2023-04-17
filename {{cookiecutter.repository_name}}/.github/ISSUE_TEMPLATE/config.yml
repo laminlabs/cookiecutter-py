@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+    - name: Contact Lamin
+      url: https://lamin.ai/contact
+      about: Please open issues for bugs. Feel free to contact us for other requests.
