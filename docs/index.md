@@ -3,9 +3,9 @@
 :end-line: 1
 ```
 
-- {doc}`get-started`.
-- Check out the [architecture](architecture) of the project template.
-- View the [changelog](changelog).
+-   {doc}`get-started`.
+-   Check out the [architecture](architecture) of the project template.
+-   View the [changelog](changelog).
 
 ```{toctree}
 :maxdepth: 1
