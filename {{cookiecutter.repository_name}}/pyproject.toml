@@ -31,8 +31,3 @@ preview = true
 testpaths = [
     "tests",
 ]
-
-[tool.coverage.run]
-omit = [
-    "{{ cookiecutter.package_name }}/*",
-]
