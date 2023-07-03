@@ -18,8 +18,6 @@ Home = "https://github.com/laminlabs/{{ cookiecutter.repository_name }}"
 dev = [
     "pre-commit",
     "nox",
-]
-test = [
     "pytest>=6.0",
     "pytest-cov",
 ]

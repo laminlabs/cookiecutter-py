@@ -1,9 +1,7 @@
 import nox
-from laminci import upload_docs_artifact
 from laminci.nox import (
     build_docs,
     login_testuser1,
-    login_testuser2,
     run_pre_commit,
     run_pytest,
 )
@@ -23,6 +21,6 @@ def lint(session: nox.Session) -> None:
 @nox.session()
 def build(session):
     session.run(*f"pip install -e .[dev]".split())
+    login_testuser1()
     run_pytest(session)
     build_docs(session)
-    upload_docs_artifact(aws=True)
