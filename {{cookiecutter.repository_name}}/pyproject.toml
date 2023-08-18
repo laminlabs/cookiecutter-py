@@ -3,16 +3,16 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "{{ cookiecutter.package_name }}"
+name = "lamindb_dev_datasets"
 authors = [{name = "Lamin Labs", email = "laminlabs@gmail.com"}]
 readme = "README.md"
 dynamic = ["version", "description"]
 dependencies = [
-    "nbproject",
+    "lamindb",
 ]
 
 [project.urls]
-Home = "https://github.com/laminlabs/{{ cookiecutter.repository_name }}"
+Home = "https://github.com/laminlabs/lamindb-dev-datasets"
 
 [project.optional-dependencies]
 dev = [
@@ -20,6 +20,7 @@ dev = [
     "nox",
     "pytest>=6.0",
     "pytest-cov",
+    "nbproject_test",
 ]
 
 [tool.black]
