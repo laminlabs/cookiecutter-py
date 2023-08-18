@@ -62,5 +62,5 @@ If you don't have `laminci`: `pip install laminci`
 
 To learn about all the components of your Python project, check out
 
-- [architecture](docs/architecture)
-- [changelog](docs/changelog)
+- [architecture](docs/architecture.md)
+- [changelog](docs/changelog.md)
