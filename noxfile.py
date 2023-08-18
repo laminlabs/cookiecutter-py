@@ -1,20 +1,9 @@
 import nox
-from pathlib import Path
+from laminci.nox import run_pre_commit
 
-nox.options.reuse_existing_virtualenvs = True
+nox.options.default_venv_backend = "none"
 
 
 @nox.session
 def lint(session: nox.Session) -> None:
-    session.install("pre-commit")
-    session.run("pre-commit", "install")
-    session.run("pre-commit", "run", "--all-files")
-
-
-@nox.session(python=["3.9"])
-def build(session):
-    session.install(".[dev,test]")
-    session.run("pytest")
-    prefix = "." if Path("./lndocs").exists() else ".."
-    session.install(f"{prefix}/lndocs")
-    session.run("lndocs")
+    run_pre_commit(session)
