@@ -1,11 +1,7 @@
 # Changelog
 
-## 0.3
-
-Auto-update changelog upon PR & broaden default directories.
-
 <!-- prettier-ignore -->
-Name | PR | User | Date | Patch
+Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
 ♻️ Simplify cookiecutter | [64](https://github.com/laminlabs/cookiecutter-py/pull/64) | [falexwolf](https://github.com/falexwolf) | 2023-08-18 |
 Fix coverage in template | [63](https://github.com/laminlabs/cookiecutter-py/pull/63) | [Zethson](https://github.com/Zethson) | 2023-06-16 |
