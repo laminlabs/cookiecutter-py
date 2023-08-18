@@ -7,6 +7,7 @@ Auto-update changelog upon PR & broaden default directories.
 <!-- prettier-ignore -->
 Name | PR | User | Date | Patch
 --- | --- | --- | --- | ---
+♻️ Simplify cookiecutter | [64](https://github.com/laminlabs/cookiecutter-py/pull/64) | [falexwolf](https://github.com/falexwolf) | 2023-08-18 |
 Fix coverage in template | [63](https://github.com/laminlabs/cookiecutter-py/pull/63) | [Zethson](https://github.com/Zethson) | 2023-06-16 |
 Increase configure-aws-credentials version from v1 to v2 | [47](https://github.com/laminlabs/cookiecutter-py/pull/47) | [Zethson](https://github.com/Zethson) | 2023-04-11 |
 ⚡ Also cache global py env, not just nox | [48](https://github.com/laminlabs/cookiecutter-py/pull/48) | [falexwolf](https://github.com/falexwolf) | 2023-04-10 |
