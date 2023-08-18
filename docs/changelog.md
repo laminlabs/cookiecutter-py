@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+📝 Simplify docs | [65](https://github.com/laminlabs/cookiecutter-py/pull/65) | [falexwolf](https://github.com/falexwolf) | 2023-08-18 |
 ♻️ Simplify cookiecutter | [64](https://github.com/laminlabs/cookiecutter-py/pull/64) | [falexwolf](https://github.com/falexwolf) | 2023-08-18 |
 Fix coverage in template | [63](https://github.com/laminlabs/cookiecutter-py/pull/63) | [Zethson](https://github.com/Zethson) | 2023-06-16 |
 Increase configure-aws-credentials version from v1 to v2 | [47](https://github.com/laminlabs/cookiecutter-py/pull/47) | [Zethson](https://github.com/Zethson) | 2023-04-11 |
