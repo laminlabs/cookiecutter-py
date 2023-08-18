@@ -7,7 +7,7 @@
 :maxdepth: 1
 :hidden:
 
-notebook
+guide
 reference
 changelog
 ```
