@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+📝 Better email address | [67](https://github.com/laminlabs/cookiecutter-py/pull/67) | [falexwolf](https://github.com/falexwolf) | 2023-09-17 |
 📝 Simplify docs | [65](https://github.com/laminlabs/cookiecutter-py/pull/65) | [falexwolf](https://github.com/falexwolf) | 2023-08-18 |
 ♻️ Simplify cookiecutter | [64](https://github.com/laminlabs/cookiecutter-py/pull/64) | [falexwolf](https://github.com/falexwolf) | 2023-08-18 |
 Fix coverage in template | [63](https://github.com/laminlabs/cookiecutter-py/pull/63) | [Zethson](https://github.com/Zethson) | 2023-06-16 |
