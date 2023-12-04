@@ -53,7 +53,9 @@ gitmoji -i
 
 ## Release process
 
-If you don't have `laminci`: `pip install laminci`
+If you don't have `laminci`: `pip install laminci`.
+
+Please ensure that you have either the [Github CLI](https://cli.github.com/) installed or a valid Github token in the `GITHUB_TOKEN` environment variable with at least `read:org` scope.
 
 1. Set the version string (`X.X.X`) in `mypackage/__init__.py` and `docs/changelog.md`. Use [semantic versioning](https://semver.org) with [Python versioning](https://peps.python.org/pep-0440/).
 2. Run `laminci release` on the command line. If it's a public package for PyPI, add the `--pypi` flag.
