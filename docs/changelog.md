@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+Install graphviz | [66](https://github.com/laminlabs/cookiecutter-py/pull/66) | [Zethson](https://github.com/Zethson) | 2023-12-13 |
 Proper ruff config for template | [68](https://github.com/laminlabs/cookiecutter-py/pull/68) | [Zethson](https://github.com/Zethson) | 2023-12-13 |
 📝 Better email address | [67](https://github.com/laminlabs/cookiecutter-py/pull/67) | [falexwolf](https://github.com/falexwolf) | 2023-09-17 |
 📝 Simplify docs | [65](https://github.com/laminlabs/cookiecutter-py/pull/65) | [falexwolf](https://github.com/falexwolf) | 2023-08-18 |
