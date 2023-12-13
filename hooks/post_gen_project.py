@@ -94,7 +94,7 @@ if __name__ == "__main__":
         )
 
     github_workflow = os.path.join(PROJECT_DIRECTORY, ".github/workflows/build.yml")
-    with open(github_workflow, "r") as f:
+    with open(github_workflow) as f:
         original = f.read()
     modified = original.replace(
         "cookiecutter.project_slug", "{{ cookiecutter.project_slug }}"

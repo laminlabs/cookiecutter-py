@@ -4,13 +4,13 @@
 
 Install `cookiecutter`:
 
-```
+```bash
 pip install cookiecutter
 ```
 
 Generate a Python package project:
 
-```
+```bash
 cookiecutter https://github.com/laminlabs/cookiecutter-py.git
 ```
 
@@ -18,7 +18,7 @@ cookiecutter https://github.com/laminlabs/cookiecutter-py.git
 
 Set up the `collab-maren` repository for the Maren project, which holds the `maren` package:
 
-```
+```bash
 $ cookiecutter https://github.com/laminlabs/cookiecutter-py.git
 project_name: Maren
 project_slug [maren]:
