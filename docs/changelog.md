@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+Proper ruff config for template | [68](https://github.com/laminlabs/cookiecutter-py/pull/68) | [Zethson](https://github.com/Zethson) | 2023-12-13 |
 📝 Better email address | [67](https://github.com/laminlabs/cookiecutter-py/pull/67) | [falexwolf](https://github.com/falexwolf) | 2023-09-17 |
 📝 Simplify docs | [65](https://github.com/laminlabs/cookiecutter-py/pull/65) | [falexwolf](https://github.com/falexwolf) | 2023-08-18 |
 ♻️ Simplify cookiecutter | [64](https://github.com/laminlabs/cookiecutter-py/pull/64) | [falexwolf](https://github.com/falexwolf) | 2023-08-18 |
