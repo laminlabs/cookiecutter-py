@@ -21,12 +21,14 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install cookiecutter pre-commit
-        run: pip install -U cookiecutter pre-commit
+      - name: Install uv cookiecutter pre-commit
+        run: |
+          pip install uv
+          uv pip install --system -U cookiecutter pre-commit
 
       - name: Create template
         run: echo -e "newproject\nnewproject\nrepository\nnewproject\ndescription\n1" | cookiecutter .
