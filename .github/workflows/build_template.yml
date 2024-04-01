@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.9"]
+        python-version: ["3.11"]
 
     steps:
       - name: Checkout main
@@ -26,7 +26,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install cookiecutter pre-commit
-        run: pip install cookiecutter pre-commit
+        run: pip install -U cookiecutter pre-commit
 
       - name: Create template
         run: echo -e "newproject\nnewproject\nrepository\nnewproject\ndescription\n1" | cookiecutter .
