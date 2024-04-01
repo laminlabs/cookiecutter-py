@@ -15,7 +15,7 @@ def lint(session: nox.Session) -> None:
 
 @nox.session()
 def build(session):
-    session.run(*"uv pip install -e .[dev]".split())
+    session.run(*"uv pip install --system -e .[dev]".split())
     login_testuser1(session)
     run_pytest(session)
     build_docs(session, strict=True)
