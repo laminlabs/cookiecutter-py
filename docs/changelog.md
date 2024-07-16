@@ -3,6 +3,8 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+Add pre-release CI | [73](https://github.com/laminlabs/cookiecutter-py/pull/73) | [Zethson](https://github.com/Zethson) | 2024-07-16 |
+Add bandit to template | [72](https://github.com/laminlabs/cookiecutter-py/pull/72) | [Zethson](https://github.com/Zethson) | 2024-07-16 |
 Use uv | [70](https://github.com/laminlabs/cookiecutter-py/pull/70) | [Zethson](https://github.com/Zethson) | 2024-04-01 |
 Install graphviz | [66](https://github.com/laminlabs/cookiecutter-py/pull/66) | [Zethson](https://github.com/Zethson) | 2023-12-13 |
 Proper ruff config for template | [68](https://github.com/laminlabs/cookiecutter-py/pull/68) | [Zethson](https://github.com/Zethson) | 2023-12-13 |
