@@ -32,7 +32,6 @@ jobs:
           ssh-key: ${{ secrets.READ_LNDOCS }}
           path: lndocs
           ref: main
-
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
@@ -40,19 +39,18 @@ jobs:
         with:
           path: ~/.cache/pre-commit
           key: pre-commit-${{ runner.os }}-${{ hashFiles('.pre-commit-config.yaml') }}
-      - run: pip install -U laminci
-      - run: sudo apt-get -y install graphviz
-      - uses: aws-actions/configure-aws-credentials@v2
+      - run: pip install "laminci[doc-changes]@git+https://x-access-token:${{ secrets.LAMIN_BUILD_DOCS }}@github.com/laminlabs/laminci"
+      # - run: sudo apt-get -y install graphviz
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-central-1
+          aws-region: us-east-1
       - run: nox -s lint
       - run: nox -s build
       - uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-
       - uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: "_build/html"
@@ -62,7 +60,6 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-
       - uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
