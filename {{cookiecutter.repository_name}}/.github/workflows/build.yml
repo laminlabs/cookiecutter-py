@@ -46,8 +46,8 @@ jobs:
         with:
           path: ~/.cache/pre-commit
           key: pre-commit-${{ runner.os }}-${{ hashFiles('.pre-commit-config.yaml') }}
-      - run: pip install -U laminci
-      - run: sudo apt-get -y install graphviz
+      - run: pip install git+https://github.com/laminlabs/laminci
+      # - run: sudo apt-get -y install graphviz
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
