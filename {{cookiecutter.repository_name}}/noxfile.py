@@ -14,12 +14,12 @@ def lint(session: nox.Session) -> None:
 
 
 @nox.session()
-@nox.parametrize("group", ["{{ cookiecutter.package_name }}-unit", "{{ cookiecutter.package_name }}-docs"])
+@nox.parametrize("group", ["unit", "docs"])
 def build(session, group):
     session.run(*"uv pip install --system -e .[dev]".split())
     login_testuser1(session)
 
-    if group == "{{ cookiecutter.package_name }}-unit":
+    if group == "unit":
         run_pytest(session)
-    elif group == "{{ cookiecutter.package_name }}-docs":
+    elif group == "docs":
         build_docs(session, strict=True)
