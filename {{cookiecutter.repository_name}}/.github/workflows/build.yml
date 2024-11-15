@@ -28,6 +28,7 @@ jobs:
             "${{ format('{0}-docs', env.PACKAGE_NAME) }}",
           ]
     timeout-minutes: 15
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -75,7 +76,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 472bdad691b4483dea759eadb37110bd
-          projectName: ${{ env.PACKAGE_SLUG }} # Fixed from PROJECTS_SLUG to PACKAGE_SLUG
+          projectName: ${{ env.PACKAGE_SLUG }}
           directory: "_build/html"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: main
