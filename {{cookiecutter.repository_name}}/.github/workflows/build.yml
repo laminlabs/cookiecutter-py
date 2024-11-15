@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     env:
       GITHUB_EVENT_NAME: ${{ github.event_name }}
     strategy:
@@ -16,44 +16,57 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            python: "3.10"
+            python: "3.12"
           - os: ubuntu-latest
-            python: "3.10"
+            python: "3.12"
             pip-flags: "--pre"
+        group: ["bionty-unit", "bionty-docs"]
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
-      - uses: actions/checkout@v4
+      
+      - uses: actions/checkout@v4.2.2
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
         with:
           repository: laminlabs/lndocs
           ssh-key: ${{ secrets.READ_LNDOCS }}
           path: lndocs
           ref: main
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5.3.0
         with:
           python-version: ${{ matrix.python }}
-      - uses: actions/cache@v3
+
+      - uses: actions/cache@v4.1.2
         with:
           path: ~/.cache/pre-commit
           key: pre-commit-${{ runner.os }}-${{ hashFiles('.pre-commit-config.yaml') }}
       - run: pip install -U laminci
       - run: sudo apt-get -y install graphviz
-      - uses: aws-actions/configure-aws-credentials@v2
+
+      - uses: aws-actions/configure-aws-credentials@v4.0.2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-central-1
-      - run: nox -s lint
-      - run: nox -s build
-      - uses: codecov/codecov-action@v2
+
+      - name: Run lint
+        if: matrix.group == '{{ cookiecutter.package_name }}-unit'
+        run: nox -s lint
+
+      - name: Run build
+        if: ${{ !(matrix.group == '{{ cookiecutter.package_name }}-docs' && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) }}
+        run: nox -s "build(group='${{ matrix.group }}')"
+        
+      - uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
-      - uses: nwtgck/actions-netlify@v1.2
+      - uses: nwtgck/actions-netlify@v3
+        if: ${{ matrix.group == '{{ cookiecutter.package_name }}-docs' && !(github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) }}
         with:
           publish-dir: "_build/html"
           production-deploy: ${{ github.event_name == 'push' }}
@@ -63,11 +76,11 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
-      - uses: cloudflare/pages-action@v1
+      - uses: cloudflare/pages-action@v1.5.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 472bdad691b4483dea759eadb37110bd
-          projectName: projectName
+          projectName: {{ cookiecutter.project_slug }}
           directory: "_build/html"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: main
