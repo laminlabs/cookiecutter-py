@@ -32,6 +32,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: actions/checkout@v4
         if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
         with:
@@ -39,29 +40,36 @@ jobs:
           ssh-key: ${{ secrets.READ_LNDOCS }}
           path: lndocs
           ref: main
+
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
+
       - uses: actions/cache@v4
         with:
           path: ~/.cache/pre-commit
           key: pre-commit-${{ runner.os }}-${{ hashFiles('.pre-commit-config.yaml') }}
       - run: pip install git+https://github.com/laminlabs/laminci
       # - run: sudo apt-get -y install graphviz
+
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-central-1
+
       - name: Run lint
         if: matrix.group == format('{0}-unit', env.PACKAGE_NAME)
         run: nox -s lint
+
       - name: Run build
         if: ${{ !(matrix.group == format('{0}-docs', env.PACKAGE_NAME) && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) }}
         run: nox -s "build(group='${{ matrix.group }}')"
+
       - uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+
       - uses: cloudflare/pages-action@v1
         if: ${{ !(matrix.group == format('{0}-docs', env.PACKAGE_NAME) && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) }}
         with:
