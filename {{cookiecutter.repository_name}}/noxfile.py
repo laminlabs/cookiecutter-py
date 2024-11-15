@@ -18,7 +18,7 @@ def lint(session: nox.Session) -> None:
 def build(session, group):
     session.run(*"uv pip install --system -e .[dev]".split())
     login_testuser1(session)
-    
+
     if group == "{{ cookiecutter.package_name }}-unit":
         run_pytest(session)
     elif group == "{{ cookiecutter.package_name }}-docs":

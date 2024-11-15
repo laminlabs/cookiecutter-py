@@ -13,7 +13,8 @@ repos:
         exclude: |
           (?x)(
             docs/changelog.md|
-            ^{{cookiecutter.repository_name}}/lamin-project.yaml
+            ^{{cookiecutter.repository_name}}/lamin-project.yaml|
+            ^{{cookiecutter.repository_name}}/.github/workflows/build.yml
           )
   - repo: https://github.com/kynan/nbstripout
     rev: 0.6.1
@@ -55,6 +56,7 @@ repos:
       - id: check-yaml
         exclude: |
           (?x)(
-              ^{{cookiecutter.repository_name}}/lamin-project.yaml
+              ^{{cookiecutter.repository_name}}/lamin-project.yaml|
+              ^{{cookiecutter.repository_name}}/.github/workflows/build.yml
           )
       - id: check-added-large-files
