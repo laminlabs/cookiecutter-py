@@ -19,11 +19,7 @@ jobs:
           - os: ubuntu-latest
             python: "3.12"
             pip-flags: "--pre"
-        group:
-          [
-            "unit",
-            "docs",
-          ]
+        group: ["unit", "docs"]
     timeout-minutes: 15
 
     steps:
@@ -73,7 +69,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 472bdad691b4483dea759eadb37110bd
-          projectName: ProjectName
+          projectName: projectName
           directory: "_build/html"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: main
