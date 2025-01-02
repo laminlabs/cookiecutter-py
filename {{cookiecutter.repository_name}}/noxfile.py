@@ -14,8 +14,12 @@ def lint(session: nox.Session) -> None:
 
 
 @nox.session()
-def build(session):
+@nox.parametrize("group", ["unit", "docs"])
+def build(session, group):
     session.run(*"uv pip install --system -e .[dev]".split())
     login_testuser1(session)
-    run_pytest(session)
-    build_docs(session, strict=True)
+
+    if group == "unit":
+        run_pytest(session)
+    elif group == "docs":
+        build_docs(session, strict=True)
