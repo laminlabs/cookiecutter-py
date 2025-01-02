@@ -64,14 +64,20 @@ jobs:
       - uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-
-      - uses: cloudflare/pages-action@v1
+      - uses: cloudflare/wrangler-action@v3
         if: ${{ !(matrix.group == 'docs' && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) }}
+        id: cloudflare
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 472bdad691b4483dea759eadb37110bd
-          projectName: projectName
-          directory: "_build/html"
+          command: pages deploy "_build/html" --project-name=PROJECTNAME
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-          wranglerVersion: "3"
+      - uses: edumserrano/find-create-or-update-comment@v2
+        if: ${{ !(matrix.group == 'docs' && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body-includes: "Deployment URL"
+          comment-author: "github-actions[bot]"
+          body: |
+            Deployment URL: ${{ steps.cloudflare.outputs.deployment-url }}
+          edit-mode: replace
