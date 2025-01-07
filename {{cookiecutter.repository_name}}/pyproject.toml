@@ -4,6 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "{{ cookiecutter.package_name }}"
+requires-python = ">=3.9,<3.13"
 authors = [{name = "Lamin Labs", email = "open-source@lamin.ai"}]
 readme = "README.md"
 dynamic = ["version", "description"]
@@ -26,6 +27,9 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = [
     "tests",
+]
+filterwarnings = [
+    "ignore:Jupyter is migrating its paths to use standard platformdirs:DeprecationWarning"
 ]
 
 [tool.ruff]
