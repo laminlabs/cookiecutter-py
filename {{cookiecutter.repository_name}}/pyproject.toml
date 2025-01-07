@@ -125,7 +125,7 @@ ignore = [
 convention = "google"
 
 [tool.ruff.per-file-ignores]
-"docs/*" = ["I"]
+"docs/*" = ["I", "S101"]
 "tests/**/*.py" = [
     "D",  # docstrings are allowed to look a bit off
     "S101", # asserts allowed in tests...
