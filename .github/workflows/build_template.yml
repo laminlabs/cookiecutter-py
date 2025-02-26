@@ -38,7 +38,6 @@ jobs:
           cd repository
           git init
           git add .
-          pre-commit install
-          pre-commit clean
+          pre-commit uninstall
           pre-commit install
           pre-commit run --all
