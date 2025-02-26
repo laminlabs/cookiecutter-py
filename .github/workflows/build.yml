@@ -15,14 +15,13 @@ jobs:
         include:
           - os: ubuntu-latest
             python: "3.12"
-          - os: ubuntu-latest
-            python: "3.12"
-            pip-flags: "--pre"
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
+
       - uses: actions/cache@v3
         with:
           path: ~/.cache/pre-commit
