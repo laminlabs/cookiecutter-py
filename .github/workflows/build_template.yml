@@ -28,7 +28,8 @@ jobs:
       - name: Install uv cookiecutter pre-commit
         run: |
           pip install uv
-          uv pip install --system -U cookiecutter pre-commit
+          uv tool install -U cookiecutter
+          uv tool install -U pre-commit
 
       - name: Create template
         run: echo -e "newproject\nnewproject\nrepository\nnewproject\ndescription\n1" | cookiecutter .
@@ -38,5 +39,5 @@ jobs:
           cd repository
           git init
           git add .
-          pre-commit install
-          pre-commit run --all
+          uvx pre-commit install
+          uvx pre-commit run --all
