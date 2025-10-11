@@ -27,8 +27,8 @@ if "{{ cookiecutter.description }}".endswith("."):
     print("\nERROR: Enter `description` without ending period.")
     n_errors += 1
 
-if len("{{ cookiecutter.description }}") > 50:
-    print("\nERROR: `description` needs to be <=50 characters.")
+if len("{{ cookiecutter.description }}") > 100:
+    print("\nERROR: `description` needs to be <=100 characters.")
     n_errors += 1
 
 if n_errors > 0:
